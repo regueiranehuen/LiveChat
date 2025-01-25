@@ -3,6 +3,7 @@
 var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build(); // Chathub mapeado en Program.cs. Creamos la conexion inicial al chathub
 
 
+
 // Evento cuando la conexión se establece correctamente
 connection.on("connected", function () {
     console.log("Conexión establecida con éxito.");

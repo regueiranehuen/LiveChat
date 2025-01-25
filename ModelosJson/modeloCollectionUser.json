@@ -1,0 +1,5 @@
+{
+    "username": "user123",
+    "passwordHash": "hashed_password",
+    "salt": "random_salt"
+}

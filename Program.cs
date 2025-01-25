@@ -1,5 +1,5 @@
 using System.Net;
-using LiveChat.Hubs; 
+using LiveChat; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +21,12 @@ builder.WebHost.ConfigureKestrel(options =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSignalR(); // Esta aplicación usa SignalR
+builder.Services.AddSingleton<UsuarioRepository>();
+
+builder.Services.AddSingleton<MongoDBConnection>(sp => new MongoDBConnection());
+
+
+
 
 var app = builder.Build();
 
@@ -51,6 +57,9 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+app.MapHub<UsuarioHub>("/usuarioHub");
 
 app.MapHub<ChatHub>("/chathub"); // Mapear los hubs creados
 
