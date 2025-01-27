@@ -9,12 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(7259);  // Escucha en todas las interfaces de red en el puerto 7259
-});
-
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(5286);  // Escucha en todas las interfaces de red en el puerto 7259
+    options.ListenAnyIP(7259);  // Escucha en todas las interfaces de red en el puerto 7259 (https)
+    options.ListenAnyIP(5286);  // Escucha en todas las interfaces de red en el puerto 5286 (http)
 });
 
 
@@ -49,10 +45,6 @@ app.UseAuthorization();
 
 
 //app.UseEndpoints(endpoints => {endpoints.MapHub<ChatHub>("/chat")});
-
-
-
-
 
 
 app.MapControllerRoute(

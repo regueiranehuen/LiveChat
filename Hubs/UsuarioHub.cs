@@ -20,7 +20,7 @@ namespace LiveChat
         {
             var funcionesPasswords = new FuncionesPasswords();
             var usuarioExistente = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
-            if (usuarioExistente != null && !funcionesPasswords.PasswordValida(password))
+            if (usuarioExistente != null || !funcionesPasswords.PasswordValida(password))
             {
                 return false; // El usuario ya existe // la contraseña no es valida
             }
@@ -50,7 +50,7 @@ namespace LiveChat
     {
         public bool PasswordValida(string password)
         {
-            string regex = @"^[a-zA-Z]{8,}$"; // Al menos 8 caracteres
+            string regex = @"^[a-zA-Z0-9]{8,}$"; // Al menos 8 caracteres
             if (Regex.IsMatch(password, regex))
             {
                 return true;

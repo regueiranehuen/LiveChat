@@ -331,51 +331,6 @@
       ]
     },
     {
-      "Route": "js/registro.gpphtwgoto.js",
-      "AssetFile": "js/registro.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2128"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 16:58:51 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gpphtwgoto"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c="
-        },
-        {
-          "Name": "label",
-          "Value": "js/registro.js"
-        }
-      ]
-    },
-    {
       "Route": "js/registro.js",
       "AssetFile": "js/registro.js",
       "Selectors": [],
@@ -390,7 +345,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2128"
+          "Value": "3696"
         },
         {
           "Name": "Content-Type",
@@ -398,17 +353,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c=\""
+          "Value": "\"QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 16:58:51 GMT"
+          "Value": "Mon, 27 Jan 2025 17:26:22 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c="
+          "Value": "sha256-QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU="
+        }
+      ]
+    },
+    {
+      "Route": "js/registro.om1mdashhp.js",
+      "AssetFile": "js/registro.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 17:26:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "om1mdashhp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU="
+        },
+        {
+          "Name": "label",
+          "Value": "js/registro.js"
         }
       ]
     },

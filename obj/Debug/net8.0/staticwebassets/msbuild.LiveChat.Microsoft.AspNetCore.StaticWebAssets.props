@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gpphtwgoto</Fingerprint>
-      <Integrity>nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c=</Integrity>
+      <Fingerprint>om1mdashhp</Fingerprint>
+      <Integrity>QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registro.js'))</OriginalItemSpec>
