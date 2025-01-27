@@ -18,6 +18,11 @@ namespace LiveChat.Controllers
             return View();
         }
 
+        public IActionResult Registro()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

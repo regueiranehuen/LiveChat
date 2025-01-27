@@ -1,4 +1,93 @@
 ﻿@page
-@model LiveChat.Views.Home.RegistroModel
-@{
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    
+
+    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .register-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+            .register-container h1 {
+                margin-bottom: 1.5rem;
+                color: #333;
+            }
+
+            .register-container input[type="text"],
+            .register-container input[type="password"],
+            .register-container input[type="email"] {
+                width: 100%;
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1rem;
+            }
+
+            .register-container button {
+                width: 100%;
+                padding: 0.75rem;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .register-container button:hover {
+                    background-color: #0056b3;
+                }
+
+            .register-container .login-label {
+                display: block;
+                margin-top: 1rem;
+                color: #007bff;
+                text-decoration: none;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+
+                .register-container .login-label:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h1>Registro</h1>
+            <input type="text" name="username" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <label>
+            <input type="checkbox" id="checkboxMostrarContraseña" value="1">
+                Mostrar contraseña
+            </label>
+            <button id="btnRegistro" type="submit">Registrarse</button>
+
+        <a href="/login" class="login-label">¿Ya tienes una cuenta? Inicia sesión aquí</a>
+    </div>
+    <script src="/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="/js/registro.js" defer></script>
+</body>
+

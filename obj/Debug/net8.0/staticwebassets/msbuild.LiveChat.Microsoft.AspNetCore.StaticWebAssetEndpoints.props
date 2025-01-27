@@ -36,6 +36,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KcB2OM8f\u002BtDpuLO312qKhRDgwkK/2\u002B9wuIbQEID5TZM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2528"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022KcB2OM8f\u002BtDpuLO312qKhRDgwkK/2\u002B9wuIbQEID5TZM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 22 Jan 2025 14:12:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/LiveChat/js/registro.gpphtwgoto.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registro.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gpphtwgoto"},{"Name":"integrity","Value":"sha256-nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i\u002Bc="},{"Name":"label","Value":"_content/LiveChat/js/registro.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2128"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i\u002Bc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 27 Jan 2025 16:58:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/LiveChat/js/registro.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registro.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i\u002Bc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2128"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i\u002Bc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 27 Jan 2025 16:58:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/signalr.cqu3aupeo3.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\signalr.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

@@ -1,5 +1,6 @@
 using System.Net;
-using LiveChat; 
+using LiveChat;
+using Microsoft.AspNetCore.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,7 +60,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
-app.MapHub<UsuarioHub>("/usuarioHub");
+app.MapHub<UsuarioHub>("/usuariohub");
 
 app.MapHub<ChatHub>("/chathub"); // Mapear los hubs creados
 

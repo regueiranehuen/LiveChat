@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace LiveChat
@@ -49,11 +50,12 @@ namespace LiveChat
     {
         public bool PasswordValida(string password)
         {
-            if (password.Contains(" "))
+            string regex = @"^[a-zA-Z]{8,}$"; // Al menos 8 caracteres
+            if (Regex.IsMatch(password, regex))
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         public string GenerarSalt(int size)

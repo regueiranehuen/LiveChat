@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zu2/f2g3Bcs4nasSmRJRfX5Q8sbdzdDc8FNNZEA4/U0=",
+  "Hash": "CG8iTRNczQUu1Wt0QMul9aIcO+A6sYW2PgBj9TfClo4=",
   "Source": "LiveChat",
   "BasePath": "_content/LiveChat",
   "Mode": "Default",
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
+    },
+    {
+      "Identity": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
+      "SourceId": "LiveChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\",
+      "BasePath": "_content/LiveChat",
+      "RelativePath": "js/registro#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gpphtwgoto",
+      "Integrity": "nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\registro.js"
     },
     {
       "Identity": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\signalr.js",
@@ -6078,6 +6099,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-KcB2OM8f+tDpuLO312qKhRDgwkK/2+9wuIbQEID5TZM="
+        }
+      ]
+    },
+    {
+      "Route": "js/registro.gpphtwgoto.js",
+      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 16:58:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gpphtwgoto"
+        },
+        {
+          "Name": "label",
+          "Value": "js/registro.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c="
+        }
+      ]
+    },
+    {
+      "Route": "js/registro.js",
+      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 16:58:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nKajxeTNroT0IGV0CH9OcJ5LpxAPJSW2WqHakI9/i+c="
         }
       ]
     },
