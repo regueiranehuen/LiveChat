@@ -34,6 +34,8 @@ namespace LiveChat
             return await usuariosCollection.Find(u => u.Username == username).FirstOrDefaultAsync(); // Devuelve el primer usuario que coincida con el username o null
         }
 
+
+
         public async Task CrearUsuario(Usuario usuario)
         {
             await usuariosCollection.InsertOneAsync(usuario);

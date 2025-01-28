@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iEXCt593WTDbx4SBtI5upK82fiMP0ngxhAt0kpHBW8g=",
+  "Hash": "tO2F0dk7o0MnoIpZQyvxij1LdRpRJH/7UBWdarBHizQ=",
   "Source": "LiveChat",
   "BasePath": "_content/LiveChat",
   "Mode": "Default",
@@ -122,6 +122,27 @@
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
     },
     {
+      "Identity": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\inicioSesion.js",
+      "SourceId": "LiveChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\",
+      "BasePath": "_content/LiveChat",
+      "RelativePath": "js/inicioSesion#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "z9xxyai4r7",
+      "Integrity": "txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\inicioSesion.js"
+    },
+    {
       "Identity": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
       "SourceId": "LiveChat",
       "SourceType": "Discovered",
@@ -136,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "om1mdashhp",
-      "Integrity": "QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=",
+      "Fingerprint": "lg4s6thp7v",
+      "Integrity": "la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\registro.js"
@@ -6103,6 +6124,88 @@
       ]
     },
     {
+      "Route": "js/inicioSesion.js",
+      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\inicioSesion.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 02:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc="
+        }
+      ]
+    },
+    {
+      "Route": "js/inicioSesion.z9xxyai4r7.js",
+      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\inicioSesion.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 02:30:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z9xxyai4r7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/inicioSesion.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc="
+        }
+      ]
+    },
+    {
       "Route": "js/registro.js",
       "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
       "Selectors": [],
@@ -6113,7 +6216,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3696"
+          "Value": "3751"
         },
         {
           "Name": "Content-Type",
@@ -6121,11 +6224,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=\""
+          "Value": "\"la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 17:26:22 GMT"
+          "Value": "Tue, 28 Jan 2025 02:23:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6135,12 +6238,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU="
+          "Value": "sha256-la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w="
         }
       ]
     },
     {
-      "Route": "js/registro.om1mdashhp.js",
+      "Route": "js/registro.lg4s6thp7v.js",
       "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6150,7 +6253,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3696"
+          "Value": "3751"
         },
         {
           "Name": "Content-Type",
@@ -6158,11 +6261,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=\""
+          "Value": "\"la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 17:26:22 GMT"
+          "Value": "Tue, 28 Jan 2025 02:23:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6172,7 +6275,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "om1mdashhp"
+          "Value": "lg4s6thp7v"
         },
         {
           "Name": "label",
@@ -6180,7 +6283,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU="
+          "Value": "sha256-la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w="
         }
       ]
     },

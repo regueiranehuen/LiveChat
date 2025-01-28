@@ -331,6 +331,88 @@
       ]
     },
     {
+      "Route": "js/inicioSesion.js",
+      "AssetFile": "js/inicioSesion.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 02:30:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc="
+        }
+      ]
+    },
+    {
+      "Route": "js/inicioSesion.z9xxyai4r7.js",
+      "AssetFile": "js/inicioSesion.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 02:30:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z9xxyai4r7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-txDp/dG+8IFGCWh+o5LhuqaDhb4+uVupb3+PjWnSddc="
+        },
+        {
+          "Name": "label",
+          "Value": "js/inicioSesion.js"
+        }
+      ]
+    },
+    {
       "Route": "js/registro.js",
       "AssetFile": "js/registro.js",
       "Selectors": [],
@@ -345,7 +427,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3696"
+          "Value": "3751"
         },
         {
           "Name": "Content-Type",
@@ -353,22 +435,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=\""
+          "Value": "\"la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 17:26:22 GMT"
+          "Value": "Tue, 28 Jan 2025 02:23:29 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU="
+          "Value": "sha256-la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w="
         }
       ]
     },
     {
-      "Route": "js/registro.om1mdashhp.js",
+      "Route": "js/registro.lg4s6thp7v.js",
       "AssetFile": "js/registro.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -382,7 +464,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3696"
+          "Value": "3751"
         },
         {
           "Name": "Content-Type",
@@ -390,21 +472,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU=\""
+          "Value": "\"la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 27 Jan 2025 17:26:22 GMT"
+          "Value": "Tue, 28 Jan 2025 02:23:29 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "om1mdashhp"
+          "Value": "lg4s6thp7v"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-QLmrcne7FC2ehhI6dU2JAQXZZinoomYs+FcyvYmCwKU="
+          "Value": "sha256-la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w="
         },
         {
           "Name": "label",

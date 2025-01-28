@@ -34,10 +34,15 @@ namespace LiveChat
         }
 
 
-        public async Task<bool> IniciarSesion(string username, string passwordHash)
+        public async Task<bool> IniciarSesion(string username, string password)
         {
+            var funcionesPasswords = new FuncionesPasswords();
+           
             var usuario = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
-            if (usuario == null || usuario.PasswordHash != passwordHash)
+
+            string passwordEscritaHasheada = funcionesPasswords.HashearPassword(password, usuario.Salt);
+
+            if (usuario == null || usuario.PasswordHash != passwordEscritaHasheada)
             {
                 return false; // Usuario no existe o contraseña incorrecta
             }

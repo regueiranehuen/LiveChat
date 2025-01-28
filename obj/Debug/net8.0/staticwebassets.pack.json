@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\chat.js"
     },
     {
+      "Id": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\inicioSesion.js",
+      "PackagePath": "staticwebassets\\js\\inicioSesion.js"
+    },
+    {
       "Id": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
       "PackagePath": "staticwebassets\\js\\registro.js"
     },

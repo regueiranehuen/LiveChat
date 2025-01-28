@@ -1,6 +1,7 @@
 using System.Net;
 using LiveChat;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Win32;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,9 +19,30 @@ builder.WebHost.ConfigureKestrel(options =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSignalR(); // Esta aplicación usa SignalR
-builder.Services.AddSingleton<UsuarioRepository>();
 
+// Creo una nueva instancia de UsuarioRepository para cada solicitud HTTP.
+builder.Services.AddScoped<UsuarioRepository>();
+
+
+
+// Crea una única instancia de MongoDBConnection y la reutiliza en toda la aplicación
 builder.Services.AddSingleton<MongoDBConnection>(sp => new MongoDBConnection());
+
+/*La inyección de dependencias (Dependency Injection o DI) es un patrón de diseño que ayuda a gestionar las dependencias entre los diferentes componentes de una aplicación de una manera organizada, flexible
+  y fácil de mantener. En lugar de que un componente cree directamente sus dependencias (objetos necesarios para funcionar), estas se proporcionan ("inyectan") desde el exterior.*/
+
+/* Gracias a la inyeccion de dependencias puedo evitar  instanciar manualmente los objetos (como MongoDBConnection o UsuarioRepository) en cada lugar donde los necesites. En lugar de eso:
+
+Registro las dependencias en el contenedor (en tu caso, builder.Services en Program.cs).
+ASP.NET Core se encarga automáticamente de:
+Crear las instancias cuando son necesarias.
+Resolver las dependencias de forma correcta y ordenada.
+Elegir la "vida útil" (singleton, scoped, transient) según cómo hayas registrado cada servicio.*/
+
+// Me evito este código:
+/*
+var conexion = new MongoDBConnection();
+var UsuarioRepository = new UsuarioRepository(conexion);*/
 
 
 

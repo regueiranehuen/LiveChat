@@ -23,6 +23,11 @@ namespace LiveChat.Controllers
             return View();
         }
 
+        public IActionResult Chatroom()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
