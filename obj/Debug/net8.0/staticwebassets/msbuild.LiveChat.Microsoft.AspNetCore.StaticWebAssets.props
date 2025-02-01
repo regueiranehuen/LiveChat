@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fj9bx0fmtf</Fingerprint>
-      <Integrity>9ck1MlUxox+cHKGqrwQnCMXW1YOmLkDmgZImH86qy7U=</Integrity>
+      <Fingerprint>d5794ull22</Fingerprint>
+      <Integrity>jycyHF+b0YKWn9iqNC+SYS5xT2e8STOGIjGnFXgpIPk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\inicioSesion.js'))</OriginalItemSpec>
@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lg4s6thp7v</Fingerprint>
-      <Integrity>la8pJQsANa5E/IOqwa+FvPNQNCqyPDdGWaycefY0f8w=</Integrity>
+      <Fingerprint>m2l6p08gfh</Fingerprint>
+      <Integrity>0habeIgOrBLOXxzv+vVdey5F6ma37KAljuz+mB15Dw4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registro.js'))</OriginalItemSpec>

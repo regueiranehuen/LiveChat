@@ -36,29 +36,29 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zqkmfgnb93"},{"Name":"integrity","Value":"sha256-dQ4ZT9\u002BxesCdtzSnbsuCdak8NSA6Mf0HdamsiiJUdAo="},{"Name":"label","Value":"_content/LiveChat/js/chat.js"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2466"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022dQ4ZT9\u002BxesCdtzSnbsuCdak8NSA6Mf0HdamsiiJUdAo=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Feb 2025 14:02:39 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LiveChat/js/inicioSesion.fj9bx0fmtf.js">
+    <StaticWebAssetEndpoint Include="_content/LiveChat/js/inicioSesion.d5794ull22.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\inicioSesion.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fj9bx0fmtf"},{"Name":"integrity","Value":"sha256-9ck1MlUxox\u002BcHKGqrwQnCMXW1YOmLkDmgZImH86qy7U="},{"Name":"label","Value":"_content/LiveChat/js/inicioSesion.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3302"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00229ck1MlUxox\u002BcHKGqrwQnCMXW1YOmLkDmgZImH86qy7U=\u0022"},{"Name":"Last-Modified","Value":"Fri, 31 Jan 2025 17:07:12 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d5794ull22"},{"Name":"integrity","Value":"sha256-jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk="},{"Name":"label","Value":"_content/LiveChat/js/inicioSesion.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Feb 2025 18:16:01 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/inicioSesion.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\inicioSesion.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-9ck1MlUxox\u002BcHKGqrwQnCMXW1YOmLkDmgZImH86qy7U="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3302"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00229ck1MlUxox\u002BcHKGqrwQnCMXW1YOmLkDmgZImH86qy7U=\u0022"},{"Name":"Last-Modified","Value":"Fri, 31 Jan 2025 17:07:12 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Feb 2025 18:16:01 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/registro.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registro.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-la8pJQsANa5E/IOqwa\u002BFvPNQNCqyPDdGWaycefY0f8w="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3751"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022la8pJQsANa5E/IOqwa\u002BFvPNQNCqyPDdGWaycefY0f8w=\u0022"},{"Name":"Last-Modified","Value":"Tue, 28 Jan 2025 02:23:29 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0habeIgOrBLOXxzv\u002BvVdey5F6ma37KAljuz\u002BmB15Dw4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3788"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00220habeIgOrBLOXxzv\u002BvVdey5F6ma37KAljuz\u002BmB15Dw4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Feb 2025 17:18:18 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LiveChat/js/registro.lg4s6thp7v.js">
+    <StaticWebAssetEndpoint Include="_content/LiveChat/js/registro.m2l6p08gfh.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registro.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lg4s6thp7v"},{"Name":"integrity","Value":"sha256-la8pJQsANa5E/IOqwa\u002BFvPNQNCqyPDdGWaycefY0f8w="},{"Name":"label","Value":"_content/LiveChat/js/registro.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3751"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022la8pJQsANa5E/IOqwa\u002BFvPNQNCqyPDdGWaycefY0f8w=\u0022"},{"Name":"Last-Modified","Value":"Tue, 28 Jan 2025 02:23:29 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m2l6p08gfh"},{"Name":"integrity","Value":"sha256-0habeIgOrBLOXxzv\u002BvVdey5F6ma37KAljuz\u002BmB15Dw4="},{"Name":"label","Value":"_content/LiveChat/js/registro.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3788"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00220habeIgOrBLOXxzv\u002BvVdey5F6ma37KAljuz\u002BmB15Dw4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Feb 2025 17:18:18 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/signalr.cqu3aupeo3.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\signalr.js'))</AssetFile>

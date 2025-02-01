@@ -101,7 +101,7 @@ namespace LiveChat
 
         public bool PasswordValida(string password)
         {
-            string regex = @"^{8,}$"; // Al menos 8 caracteres
+            string regex = @"^.{8,}$"; // Al menos 8 caracteres
             if (Regex.IsMatch(password, regex))
             {
                 return true;

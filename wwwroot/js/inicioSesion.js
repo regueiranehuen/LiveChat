@@ -61,19 +61,30 @@ connection.onreconnecting(function (error) {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("checkboxMostrarContraseña").addEventListener("click", function (event) {
+        var passwordFields = document.getElementsByName("password");
+
+        passwordFields.forEach(function (passwordField) {
+            if (passwordField.type === "password") {
+                passwordField.type = "text"; // Muestra la contraseña
+            } else {
+                passwordField.type = "password"; // Oculta la contraseña
+            }
+        });
+    });
+});
+
 
 document.getElementById("btnInicioSesion").addEventListener("click", async function () {
     var user = document.getElementsByName("username")[0].value;
     var password = document.getElementsByName("password")[0].value;
-    alert(`user: ${user}`);
     try {
         var usuarioRegistrado = await connection.invoke("IniciarSesion", user, password);
         if (usuarioRegistrado) {
 
             // Reemplazar el placeholder con el valor real del usuario
             var url = urlTemplate.replace('__usuario__', encodeURIComponent(user));
-
-            alert(`Redirigiendo a url: ${url}`);
 
             // Redirigir
             window.location.href = url;
