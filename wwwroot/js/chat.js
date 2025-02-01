@@ -38,7 +38,7 @@ connection.on("ReceiveMessage", function (user, message, sentAt) { // Al recibir
     // We can assign user-supplied strings to an element's textContent because it
     // is not interpreted as markup. If you're assigning in any other way, you
     // should be aware of possible script injection concerns.
-    li.textContent = `${user}: at ${sentAt}: says ${message}`;
+    li.textContent = `(${sentAt}) ${user}: ${message}`;
 });
 
 connection.start().then(function () {
@@ -53,10 +53,10 @@ connection.start().then(function () {
 
 
 document.getElementById("sendButton").addEventListener("click", function (event) { // OnClick event
-    var user = document.getElementById("userInput").value;
+
     var message = document.getElementById("messageInput").value;
 
-    connection.invoke("SendMessage", user, message).catch(function (err) { // Invoke llama al método pasado como parámetro en el ChatHub
+    connection.invoke("SendMessage", usuario, message).catch(function (err) { // Invoke llama al método pasado como parámetro en el ChatHub
         return alert(err.toString());
     });
     event.preventDefault(); // Evita que la página se recargue
