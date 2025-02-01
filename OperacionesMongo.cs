@@ -17,6 +17,10 @@ namespace LiveChat
             return database.GetCollection<Usuario>("Usuarios");
         }
 
+        public IMongoCollection<Conversacion> GetConversacionesCollection()
+        {
+            return database.GetCollection<Conversacion>("Conversaciones");
+        }
 
     }
 
@@ -40,5 +44,52 @@ namespace LiveChat
         {
             await usuariosCollection.InsertOneAsync(usuario);
         }
+    }
+
+    public class ConversacionRepository
+    {
+        private readonly IMongoCollection<Conversacion> conversacionesCollection;
+        public ConversacionRepository(MongoDBConnection connection)
+        {
+            conversacionesCollection = connection.GetConversacionesCollection();
+        }
+
+
+
+        public bool ExisteConversacion(string usuario1, string usuario2)
+        {
+            return conversacionesCollection.Find(c => c.Id == this.CrearIdConversacion(usuario1, usuario2) || 
+                                                c.Id == this.CrearIdConversacion(usuario2,usuario1)).Any();
+        }
+
+        public string CrearIdConversacion(string usuario1, string usuario2)
+        {
+            return usuario1 + "," + usuario2;
+        }
+
+        public async Task CrearConversacion(string usuario1, string usuario2)
+        {
+            string idConversacion = this.CrearIdConversacion(usuario1, usuario2);
+            Conversacion conversacion = new Conversacion(idConversacion, null); // Una conversacion sin mensajes
+            await conversacionesCollection.InsertOneAsync(conversacion);
+        }
+
+        public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)
+        {
+          
+            return await conversacionesCollection.Find(c => c.Id.Contains(username + ",") ||
+                                                        c.Id.Contains(","+username)).ToListAsync();
+        }
+
+        public async Task<Conversacion> ObtenerConversacionPorId(string id)
+        {
+            return await conversacionesCollection.Find(c => c.Id == id).FirstOrDefaultAsync();
+        }
+        /*public async Task AgregarMensajeAConversacion(string idConversacion, Mensaje mensaje)
+        {
+            var filter = Builders<Conversacion>.Filter.Eq(c => c.Id, idConversacion);
+            var update = Builders<Conversacion>.Update.Push(c => c.Mensajes, mensaje);
+            await conversacionesCollection.UpdateOneAsync(filter, update);
+        }*/
     }
 }

@@ -90,7 +90,7 @@ document.getElementById("btnRegistro").addEventListener("click", async function 
             window.location.href = "/Home/Index";
 
         } else {
-            alert("El usuario ya existe o la contraseña no es válida");
+            alert("El usuario ya existe // la contraseña no es valida // el nombre de usuario no es valido");
         }
     } catch (error) {
         console.error('Error al registrar usuario:', error);

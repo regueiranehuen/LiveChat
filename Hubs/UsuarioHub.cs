@@ -18,12 +18,15 @@ namespace LiveChat
 
         public async Task<bool> RegistrarUsuario(string username, string password)
         {
-            var funcionesPasswords = new FuncionesPasswords();
+            var funcionesRegex = new FuncionesRegex();
+            
             var usuarioExistente = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
-            if (usuarioExistente != null || !funcionesPasswords.PasswordValida(password))
+            if (usuarioExistente != null || !funcionesRegex.PasswordValida(password) || !funcionesRegex.UserValido(username))
             {
-                return false; // El usuario ya existe // la contraseña no es valida
+                return false; // El usuario ya existe // la contraseña no es valida // el nombre de usuario no es valido
             }
+            var funcionesPasswords = new FuncionesPasswords();
+
             string salt = funcionesPasswords.GenerarSalt(16);
             string passwordHasheada = funcionesPasswords.HashearPassword(password, salt);
 
@@ -49,19 +52,13 @@ namespace LiveChat
 
             return true; // Inicio de sesión exitoso
         }
+
+
     }
 
     public class FuncionesPasswords
     {
-        public bool PasswordValida(string password)
-        {
-            string regex = @"^[a-zA-Z0-9]{8,}$"; // Al menos 8 caracteres
-            if (Regex.IsMatch(password, regex))
-            {
-                return true;
-            }
-            return false;
-        }
+        
 
         public string GenerarSalt(int size)
         {
@@ -89,4 +86,30 @@ namespace LiveChat
         }
     }
 
-}
+    public class FuncionesRegex
+    {
+
+        public bool UserValido(string username)
+        {
+            string regex = @"^[a-zA-Z0-9_-]{4,}$"; // Al menos 4 caracteres, letras del abecedario, números y guiones permitidos
+            if (Regex.IsMatch(username, regex))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool PasswordValida(string password)
+        {
+            string regex = @"^{8,}$"; // Al menos 8 caracteres
+            if (Regex.IsMatch(password, regex))
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+    
+
+
+    }
