@@ -23,10 +23,21 @@ namespace LiveChat.Controllers
             return View();
         }
 
-        public IActionResult Chatroom()
+        public IActionResult Chatroom(string usuario)
         {
+            if (string.IsNullOrEmpty(usuario))
+            {
+                Debug.WriteLine("El usuario actual es null o vacío");
+                return RedirectToAction("Index");
+            }
+
+            Debug.WriteLine("Nombre usuario actual: " + usuario);
+            TempData["usuario"] = usuario;
+
             return View();
         }
+
+
 
         public IActionResult Privacy()
         {

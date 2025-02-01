@@ -2,13 +2,10 @@
 
 <!--Frontend para comunicarme con el Hub-->
 
+@using LiveChat;
+
 <div class="container">
-    <div class="row p-1">
-        <div class="col-1">User</div>
-        <div class="col-5">
-            <input type="text" id="userInput" />
-        </div>
-    </div>
+    <h1>Bienvenido al chatroom, @TempData["usuario"] !!</h1>
     <div class="row p-1">
         <div class="col-1">Message</div>
         <div class="col-5">

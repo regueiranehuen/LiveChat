@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build(); // Chathub mapeado en Program.cs. Creamos la conexion inicial al chathub
+var connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build(); // Chathub mapeado en Program.cs. Creamos la conexion inicial al chathub
 
 
 

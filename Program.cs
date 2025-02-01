@@ -18,6 +18,8 @@ builder.WebHost.ConfigureKestrel(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddRazorPages(); // Para Razor Pages (si estás usando @page)
+
 builder.Services.AddSignalR(); // Esta aplicación usa SignalR
 
 // Creo una nueva instancia de UsuarioRepository para cada solicitud HTTP.
@@ -73,6 +75,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapRazorPages(); // Solo si estás usando Razor Pages
 
 app.MapHub<UsuarioHub>("/usuariohub");
 

@@ -65,10 +65,18 @@ connection.onreconnecting(function (error) {
 document.getElementById("btnInicioSesion").addEventListener("click", async function () {
     var user = document.getElementsByName("username")[0].value;
     var password = document.getElementsByName("password")[0].value;
+    alert(`user: ${user}`);
     try {
         var usuarioRegistrado = await connection.invoke("IniciarSesion", user, password);
         if (usuarioRegistrado) {
-            window.location.href = "/Home/Chatroom";
+
+            // Reemplazar el placeholder con el valor real del usuario
+            var url = urlTemplate.replace('__usuario__', encodeURIComponent(user));
+
+            alert(`Redirigiendo a url: ${url}`);
+
+            // Redirigir
+            window.location.href = url;
         } else {
             alert("El usuario no existe // La contraseña es incorrecta");
         }
