@@ -17,6 +17,7 @@ namespace LiveChat
             // Si se quiere enviar un mensaje a un usuario en especifico
             //await Clients.User("userId").SendAsync("ReceiveMessage", user, message);
         }
+
     }
 
 

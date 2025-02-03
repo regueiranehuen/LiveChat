@@ -1,0 +1,22 @@
+﻿@page
+
+<!--Frontend para comunicarme con el Hub-->
+
+
+<div class="container">
+    <script>
+        var usuario = '@TempData["usuario"]';
+    </script>
+    <h1>Bienvenido al chatroom, @TempData["usuario"]!!</h1>
+    
+    <div class="row p-1">
+        <div class="col-6">
+            <ul id="listaMensajes"></ul>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="/js/chat.js"></script>

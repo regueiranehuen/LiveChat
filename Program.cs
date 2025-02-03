@@ -78,6 +78,7 @@ app.MapControllerRoute(
 app.MapRazorPages(); // Solo si estás usando Razor Pages
 
 app.MapHub<UsuarioHub>("/usuariohub");
+app.MapHub<UsuarioHub>("/conversacionhub");
 
 app.MapHub<ChatHub>("/chathub"); // Mapear los hubs creados
 
