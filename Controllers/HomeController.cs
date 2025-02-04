@@ -37,7 +37,28 @@ namespace LiveChat.Controllers
             return View();
         }
 
+        public IActionResult Conversaciones(string usuario)
+        {
+            if (string.IsNullOrEmpty(usuario))
+            {
+                Debug.WriteLine("El usuario actual es null o vacío");
+                return RedirectToAction("Index");
+            }
 
+            Debug.WriteLine("Nombre usuario actual: " + usuario);
+            TempData["usuario"] = usuario;
+
+            return View();
+        }
+
+        public IActionResult Chat(string conversacion, string usuario)
+        {
+            TempData["conversacion"] = conversacion;
+            TempData["usuario"]= usuario;
+            System.Diagnostics.Debug.WriteLine("id conversacion: " + conversacion);
+            System.Diagnostics.Debug.WriteLine("usuario: " + usuario);
+            return View();
+        }
 
         public IActionResult Privacy()
         {

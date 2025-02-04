@@ -25,6 +25,7 @@ builder.Services.AddSignalR(); // Esta aplicación usa SignalR
 // Creo una nueva instancia de UsuarioRepository para cada solicitud HTTP.
 builder.Services.AddScoped<UsuarioRepository>();
 
+builder.Services.AddScoped<ConversacionRepository>();
 
 
 // Crea una única instancia de MongoDBConnection y la reutiliza en toda la aplicación
@@ -78,9 +79,8 @@ app.MapControllerRoute(
 app.MapRazorPages(); // Solo si estás usando Razor Pages
 
 app.MapHub<UsuarioHub>("/usuariohub");
-app.MapHub<UsuarioHub>("/conversacionhub");
+app.MapHub<ConversacionHub>("/conversacionhub");
 
-app.MapHub<ChatHub>("/chathub"); // Mapear los hubs creados
 
 
 

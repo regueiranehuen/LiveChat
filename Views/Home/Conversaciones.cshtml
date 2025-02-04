@@ -7,7 +7,7 @@
     <script>
         var usuario = '@TempData["usuario"]';
     </script>
-    <h1>Bienvenido al chatroom, @TempData["usuario"]!!</h1>
+    <h1>Bienvenido a Livechat, @TempData["usuario"]!!</h1>
     
     <div class="row p-1">
         <div class="col-6">
@@ -19,4 +19,7 @@
 
 
 <script src="/microsoft/signalr/dist/browser/signalr.js"></script>
-<script src="/js/chat.js"></script>
+<script src="/js/conversaciones.js"></script>
+<script>
+    var urlTemplate = '@Html.Raw(Url.Action("Chat", "Home", new { conversacion = "__conversacion__", usuario = "__usuario__" }))';
+</script>

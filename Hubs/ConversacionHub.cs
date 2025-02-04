@@ -17,11 +17,11 @@ namespace LiveChat
             return await _conversacionRepository.ObtenerConversacionesPorUsuario(username);
         }
 
-        public Task<string> ObtenerUltimoMensajeConversacion(Conversacion conversacion)
+        public async Task<List<Mensaje>>ObtenerMensajesDeConversacion(string idConversacion)
         {
-            return Task.FromResult(conversacion.UltimoMensaje?.Texto ?? "Sin mensajes");
+            return await _conversacionRepository.GetMensajesDeConversacion(idConversacion);
         }
-
+     
 
     }
 }

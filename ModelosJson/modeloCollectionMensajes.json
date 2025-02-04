@@ -1,0 +1,8 @@
+{
+    "_id": "5f8f4b3b9b1f3b1b3c1b1f3b",
+    "idConversacion": "usuario1,usuario2",
+    "emisor": "usuario1",
+    "receptor": "usuario2",
+    "texto": "Hola, como estas?",
+    "fecha": "2021-06-01T12:00:00"
+}

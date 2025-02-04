@@ -1,0 +1,24 @@
+﻿@page
+
+<script>
+
+	var idConversacion = '@TempData["conversacion"]';
+	var usuario='@TempData["usuario"]';
+	let usuarios =idConversacion.split(",");
+
+	console.log("Usuario 1:" + usuarios[0]);
+	console.log("Usuario 2:" + usuarios[1]);
+
+	var usuario2;
+	if (usuarios[0] === usuario){
+		usuario2 = usuarios[1];
+	}else{
+		usuario2 = usuarios[0];
+	}
+</script>
+
+<h1 id="h1Usuario2"></h1>
+<ul id="listaMensajes"></ul>
+
+<script src="/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="/js/chatPrivado.js"></script>

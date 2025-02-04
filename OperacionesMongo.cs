@@ -27,10 +27,7 @@ namespace LiveChat
             return database.GetCollection<Mensaje>("Mensajes");
         }
 
-        public List<Mensaje> GetMensajesDeConversacion(string idConversacion)
-        {
-            return this.GetMensajesCollection().Find(m => m.IdConversacion == idConversacion).ToList();
-        }
+        
 
     }
 
@@ -59,9 +56,11 @@ namespace LiveChat
     public class ConversacionRepository
     {
         private readonly IMongoCollection<Conversacion> conversacionesCollection;
+        private readonly IMongoCollection<Mensaje> mensajesCollection;
         public ConversacionRepository(MongoDBConnection connection)
         {
             conversacionesCollection = connection.GetConversacionesCollection();
+            mensajesCollection = connection.GetMensajesCollection();
         }
 
 
@@ -100,6 +99,11 @@ namespace LiveChat
             var filter = Builders<Conversacion>.Filter.Eq(c => c.Id, idConversacion);
             var update = Builders<Conversacion>.Update.Set(c => c.UltimoMensaje, mensaje);
             await conversacionesCollection.UpdateOneAsync(filter, update); // Actualizamos la conversacion con el nuevo mensaje
+        }
+
+        public async Task<List<Mensaje>> GetMensajesDeConversacion(string idConversacion)
+        {
+            return await this.mensajesCollection.Find(m => m.IdConversacion == idConversacion).ToListAsync();
         }
 
 
