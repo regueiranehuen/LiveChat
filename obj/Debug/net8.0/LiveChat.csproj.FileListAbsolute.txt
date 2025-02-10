@@ -189,3 +189,4 @@ C:\Users\nehue\Escritorio\Programacion\ProyectosDesktopApps\ProyectosASP.NET\Liv
 C:\Users\nehue\Escritorio\Programacion\ProyectosDesktopApps\ProyectosASP.NET\LiveChat\bin\Debug\net8.0\System.Threading.Channels.dll
 C:\Users\nehue\Escritorio\Programacion\ProyectosDesktopApps\ProyectosASP.NET\LiveChat\bin\Debug\net8.0\ModelosJson\modeloCollectionUser.json
 C:\Users\nehue\Escritorio\Programacion\ProyectosDesktopApps\ProyectosASP.NET\LiveChat\bin\Debug\net8.0\ModelosJson\modeloConversacionCollection.json
+C:\Users\nehue\Escritorio\Programacion\ProyectosDesktopApps\ProyectosASP.NET\LiveChat\bin\Debug\net8.0\ModelosJson\modeloCollectionMensajes.json

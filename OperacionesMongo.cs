@@ -65,10 +65,11 @@ namespace LiveChat
 
 
 
-        public bool ExisteConversacion(string usuario1, string usuario2)
+        public async Task<Conversacion?> ExisteConversacion(string usuario1, string usuario2)
         {
-            return conversacionesCollection.Find(c => c.Id == this.CrearIdConversacion(usuario1, usuario2) ||
-                                                c.Id == this.CrearIdConversacion(usuario2, usuario1)).Any();
+            return await conversacionesCollection.Find(c => c.Id == this.CrearIdConversacion(usuario1, usuario2) || 
+                                                        c.Id == this.CrearIdConversacion(usuario2, usuario1)).FirstOrDefaultAsync();
+
         }
 
         public string CrearIdConversacion(string usuario1, string usuario2)
@@ -76,11 +77,13 @@ namespace LiveChat
             return usuario1 + "," + usuario2;
         }
 
-        public async Task CrearConversacion(string usuario1, string usuario2)
+        public async Task<Conversacion> CrearConversacion(string usuario1, string usuario2)
         {
             string idConversacion = this.CrearIdConversacion(usuario1, usuario2);
             Conversacion conversacion = new Conversacion(idConversacion, null); // Una conversacion sin mensajes
             await conversacionesCollection.InsertOneAsync(conversacion);
+
+            return conversacion;
         }
 
         public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)

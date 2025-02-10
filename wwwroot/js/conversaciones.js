@@ -70,5 +70,43 @@ connection.start().then(function () {
     console.error("Error al conectar con el Hub:", err.toString());
 });
 
+document.getElementById("btnIniciarConversacion").addEventListener("click", async function () {
+    var usuarioBuscado = document.getElementById("txtUsuarioBuscado").value;
+
+    try {
+        // Esperamos la respuesta de la invocación para saber si existe la conversación
+        var conversacion = await connection.invoke("ExisteConversacion", usuario, usuarioBuscado);
+
+        if (conversacion != null && conversacion != undefined) {
+            alert("Ya existe una conversación con ese usuario. Serás redirigido allí");
+            var url = urlTemplate.replace('__conversacion__', encodeURIComponent(conversacion.id)).replace('__usuario__', encodeURIComponent(usuario));
+            // Redirigir
+            window.location.href = url;
+        } else {
+            // Si no existe, creamos la conversación
+            var conversacionCreada = await connection.invoke("CrearConversacion", usuario, usuarioBuscado);
+
+            if (conversacionCreada != null && conversacionCreada != undefined) {
+                let idConversacion = conversacionCreada.id || conversacionCreada._id;
+
+                if (idConversacion) {
+                    alert("ID de conversación: " + idConversacion);
+                    var url = urlTemplate.replace('__conversacion__', encodeURIComponent(idConversacion)).replace('__usuario__', encodeURIComponent(usuario));
+                    // Redirigir
+                    window.location.href = url;
+                    alert("Conversación creada con éxito. Serás redirigido allí");
+                } else {
+                    alert("Error: La conversación no tiene un ID válido.");
+                }
+            } else {
+                alert("Error al crear la conversación: No se encontró al usuario");
+            }
+        }
+    } catch (err) {
+        console.error("Error al iniciar la conversación:", err.message);
+    }
+});
+
+
 
 
