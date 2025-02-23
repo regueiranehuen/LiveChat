@@ -44,11 +44,18 @@ namespace LiveChat
            
             var usuario = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
 
-            string passwordEscritaHasheada = funcionesPasswords.HashearPassword(password, usuario.Salt);
+            
 
-            if (usuario == null || usuario.PasswordHash != passwordEscritaHasheada)
+            if (usuario == null)
             {
                 return false; // Usuario no existe o contraseña incorrecta
+            }
+
+            string passwordEscritaHasheada = funcionesPasswords.HashearPassword(password, usuario.Salt);
+
+            if (usuario.PasswordHash != passwordEscritaHasheada)
+            {
+                return false; // Contraseña incorrecta
             }
 
 

@@ -1,8 +1,8 @@
 {
-    "_id": "usuario1,usuario2",
+    "_id": "user,usuario2",
     "ultimoMensaje": {
-        "emisor": "usuario1",
-        "texto": "Hola, �c�mo est�s?",
+        "emisor": "user",
+        "texto": "hola",
         "fecha": "2021-06-01T12:00:00"
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sKjMtbysCY+c2SxmloOtjprPbK/uzIEzIk+UHEVhxEw=",
+  "Hash": "7hYKBrwbq+/L4waoSQjh8a/Yg69Xzc+IL3ouwzWrsq4=",
   "Source": "LiveChat",
   "BasePath": "_content/LiveChat",
   "Mode": "Default",
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "enzdt7ai8q",
-      "Integrity": "RjE9Jw/eAJ/yQt705/77zO+sN/4RFcO3UxYCSWk/K5E=",
+      "Fingerprint": "cwy4mumm1i",
+      "Integrity": "VIgLser7Gs/ehwz8iL4hFlBF9KNfbAq7QE7xEtTGvwM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\conversaciones.js"
@@ -6248,7 +6248,7 @@
       ]
     },
     {
-      "Route": "js/conversaciones.enzdt7ai8q.js",
+      "Route": "js/conversaciones.cwy4mumm1i.js",
       "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6258,7 +6258,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4839"
+          "Value": "5042"
         },
         {
           "Name": "Content-Type",
@@ -6266,11 +6266,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RjE9Jw/eAJ/yQt705/77zO+sN/4RFcO3UxYCSWk/K5E=\""
+          "Value": "\"VIgLser7Gs/ehwz8iL4hFlBF9KNfbAq7QE7xEtTGvwM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 04:36:56 GMT"
+          "Value": "Sun, 23 Feb 2025 03:34:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6280,7 +6280,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "enzdt7ai8q"
+          "Value": "cwy4mumm1i"
         },
         {
           "Name": "label",
@@ -6288,7 +6288,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RjE9Jw/eAJ/yQt705/77zO+sN/4RFcO3UxYCSWk/K5E="
+          "Value": "sha256-VIgLser7Gs/ehwz8iL4hFlBF9KNfbAq7QE7xEtTGvwM="
         }
       ]
     },
@@ -6303,7 +6303,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4839"
+          "Value": "5042"
         },
         {
           "Name": "Content-Type",
@@ -6311,11 +6311,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RjE9Jw/eAJ/yQt705/77zO+sN/4RFcO3UxYCSWk/K5E=\""
+          "Value": "\"VIgLser7Gs/ehwz8iL4hFlBF9KNfbAq7QE7xEtTGvwM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Feb 2025 04:36:56 GMT"
+          "Value": "Sun, 23 Feb 2025 03:34:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6325,7 +6325,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RjE9Jw/eAJ/yQt705/77zO+sN/4RFcO3UxYCSWk/K5E="
+          "Value": "sha256-VIgLser7Gs/ehwz8iL4hFlBF9KNfbAq7QE7xEtTGvwM="
         }
       ]
     },

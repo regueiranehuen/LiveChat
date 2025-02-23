@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>enzdt7ai8q</Fingerprint>
-      <Integrity>RjE9Jw/eAJ/yQt705/77zO+sN/4RFcO3UxYCSWk/K5E=</Integrity>
+      <Fingerprint>cwy4mumm1i</Fingerprint>
+      <Integrity>VIgLser7Gs/ehwz8iL4hFlBF9KNfbAq7QE7xEtTGvwM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\conversaciones.js'))</OriginalItemSpec>

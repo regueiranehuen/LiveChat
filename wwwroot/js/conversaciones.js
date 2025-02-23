@@ -42,8 +42,12 @@ connection.start().then(function () {
                 let li = document.createElement("li");
 
                 // Obtener el último mensaje de cada conversación
-
-                li.textContent = conversacion.ultimoMensaje.emisor + ": " + conversacion.ultimoMensaje.texto + " " + conversacion.ultimoMensaje.fecha;
+                if (conversacion.ultimoMensaje.texto != null) {
+                    li.textContent = conversacion.ultimoMensaje.emisor + ": " + conversacion.ultimoMensaje.texto + " " + conversacion.ultimoMensaje.fecha;
+                } else {
+                    li.textContent = conversacion.ultimoMensaje.emisor;
+                }
+                
                 // Agregar un event listener al li
                 li.addEventListener("click", function () {
                     
