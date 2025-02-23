@@ -9,6 +9,31 @@ connection.on("connected", function () {
     console.log("Conexión establecida con éxito.");
 });
 
+connection.on("RecibirMensaje", function (mensaje) { // Al recibir el evento SendMessage, el cliente va a recibir el mensaje y agregarlo a la lista de mensajes
+    var li = document.createElement("li"); // List
+    document.getElementById("listaMensajes").appendChild(li); // Agregamos el mensaje a la lista de mensajes
+
+
+    // Obtener el último mensaje de cada conversación
+
+    li.textContent = mensaje.emisor + ": " + mensaje.texto + " " + mensaje.fecha;
+   
+
+
+    // Agregar un event listener al li
+    li.addEventListener("click", function () {
+
+        alert(`Clickeaste en la conversación con id ${conversacion.id}`);
+        alert(`usuario: ${usuario}`)
+        // Reemplazar el placeholder con el valor real del usuario
+        var url = urlTemplate.replace('__conversacion__', encodeURIComponent(conversacion.id)).replace('__usuario__', encodeURIComponent(usuario));
+        // Redirigir
+        window.location.href = url;
+
+    });
+    listaMensajes.appendChild(li);
+});
+
 // Evento cuando la conexión se cierra
 connection.onclose(function (error) {
     if (error) {

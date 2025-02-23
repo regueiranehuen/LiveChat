@@ -3,9 +3,14 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
+
+
 
 namespace LiveChat
 {
+    
+
     public class UsuarioHub : Hub
     {
 
@@ -15,6 +20,8 @@ namespace LiveChat
         {
             _usuarioRepository = usuarioRepository;
         }
+
+        
 
         public async Task<bool> RegistrarUsuario(string username, string password)
         {
@@ -40,7 +47,7 @@ namespace LiveChat
 
         public async Task<bool> IniciarSesion(string username, string password)
         {
-            var funcionesPasswords = new FuncionesPasswords();
+            
            
             var usuario = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
 
@@ -50,7 +57,7 @@ namespace LiveChat
             {
                 return false; // Usuario no existe o contraseña incorrecta
             }
-
+            var funcionesPasswords = new FuncionesPasswords();
             string passwordEscritaHasheada = funcionesPasswords.HashearPassword(password, usuario.Salt);
 
             if (usuario.PasswordHash != passwordEscritaHasheada)

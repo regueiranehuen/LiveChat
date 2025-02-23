@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using System.Collections.Concurrent;
+using System.Threading.Tasks;
 
 namespace LiveChat
 {
@@ -6,9 +8,31 @@ namespace LiveChat
     {
         private ConversacionRepository _conversacionRepository;
 
-        public ConversacionHub(ConversacionRepository usuarioRepository)
+
+        public ConversacionHub(ConversacionRepository conversacionRepository)
         {
-            _conversacionRepository = usuarioRepository;
+            _conversacionRepository = conversacionRepository;
+        }
+
+        public static ConcurrentDictionary<string, string> Usuarios = new ConcurrentDictionary<string, string>();
+        
+        public override async Task OnConnectedAsync()
+        {
+            string usuario = Context.User.Identity.Name; // Obtener usuario autenticado
+            string connectionId = Context.ConnectionId; // Obtener ID de conexión
+
+            if (!string.IsNullOrEmpty(usuario))
+            {
+                Usuarios.TryAdd(connectionId, usuario);
+            }
+
+            await base.OnConnectedAsync();
+        }
+
+        public override async Task OnDisconnectedAsync(Exception? exception)
+        {
+            Usuarios.TryRemove(Context.ConnectionId, out _);
+            await base.OnDisconnectedAsync(exception);
         }
 
         public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)
@@ -20,6 +44,16 @@ namespace LiveChat
         public async Task<List<Mensaje>>ObtenerMensajesDeConversacion(string idConversacion)
         {
             return await _conversacionRepository.GetMensajesDeConversacion(idConversacion);
+        }
+
+        // Se asume que la conversacion existe
+        public string ObtenerIdConversacionPorUsuarios(string usuario1, string usuario2)
+        {
+            if (_conversacionRepository.ExisteConversacion(usuario1, usuario2)!=null)
+            {
+                return _conversacionRepository.CrearIdConversacion(usuario1, usuario2);
+            }
+            return _conversacionRepository.CrearIdConversacion(usuario2, usuario1);
         }
 
 

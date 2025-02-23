@@ -104,6 +104,11 @@ namespace LiveChat
             await conversacionesCollection.UpdateOneAsync(filter, update); // Actualizamos la conversacion con el nuevo mensaje
         }
 
+        public async Task AgregarMensajeAColeccionMensajes(Mensaje mensaje)
+        {
+            await mensajesCollection.InsertOneAsync(mensaje);
+        }
+
         public async Task<List<Mensaje>> GetMensajesDeConversacion(string idConversacion)
         {
             return await this.mensajesCollection.Find(m => m.IdConversacion == idConversacion).ToListAsync();

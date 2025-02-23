@@ -5,8 +5,19 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/conversacionhub").
 
 
 // Evento cuando la conexión se establece correctamente
+
 connection.on("connected", function () {
     console.log("Conexión establecida con éxito.");
+});
+
+
+connection.on("RecibirMensaje", function (mensaje) { // Al recibir el evento SendMessage, el cliente va a recibir el mensaje y agregarlo a la lista de mensajes
+    var li = document.createElement("li"); // List
+    document.getElementById("listaMensajes").appendChild(li); // Agregamos el mensaje a la lista de mensajes
+    // We can assign user-supplied strings to an element's textContent because it
+    // is not interpreted as markup. If you're assigning in any other way, you
+    // should be aware of possible script injection concerns.
+    li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
 });
 
 // Evento cuando la conexión se cierra
@@ -59,4 +70,15 @@ connection.start().then(function () {
     console.error("Error al conectar con el Hub:", err.toString());
 });
 
+document.getElementById("btnEnviarMensaje").addEventListener("click", async function () {
+    var mensaje = document.getElementById("inputMensaje");
+    
+    try {
+        await connection.invoke("EnviarMensaje", mensaje, user);
+        
+    } catch (error) {
+        console.error('Error al enviar mensaje:', error);
+        alert("Hubo un error al enviar mensaje");
+    }
+});
 
