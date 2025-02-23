@@ -37,6 +37,7 @@ namespace LiveChat
         }
 
 
+
         public async Task<bool> IniciarSesion(string username, string password)
         {
             var funcionesPasswords = new FuncionesPasswords();
@@ -49,6 +50,8 @@ namespace LiveChat
             {
                 return false; // Usuario no existe o contraseña incorrecta
             }
+
+
 
             return true; // Inicio de sesión exitoso
         }

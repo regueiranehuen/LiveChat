@@ -1,5 +1,6 @@
 using System.Net;
 using LiveChat;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Win32;
 
@@ -13,6 +14,17 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(7259);  // Escucha en todas las interfaces de red en el puerto 7259 (https)
     options.ListenAnyIP(5286);  // Escucha en todas las interfaces de red en el puerto 5286 (http)
 });
+
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.LoginPath = "/Index";  // Redirige al login si no está autenticado
+                options.AccessDeniedPath = "/Index";  // Si no tiene permiso
+                options.SlidingExpiration = true;  // La cookie expira automáticamente después de un tiempo
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);  // Tiempo de expiración de la cookie
+            });
+
 
 
 // Add services to the container.
@@ -65,8 +77,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Configurar el middleware de autenticación
+app.UseAuthentication();
 app.UseAuthorization();
-
 
 
 //app.UseEndpoints(endpoints => {endpoints.MapHub<ChatHub>("/chat")});

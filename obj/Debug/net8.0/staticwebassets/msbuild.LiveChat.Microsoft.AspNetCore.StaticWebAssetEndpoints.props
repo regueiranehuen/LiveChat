@@ -64,13 +64,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\inicioSesion.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d5794ull22"},{"Name":"integrity","Value":"sha256-jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk="},{"Name":"label","Value":"_content/LiveChat/js/inicioSesion.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Feb 2025 18:16:01 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 23:03:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/inicioSesion.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\inicioSesion.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Feb 2025 18:16:01 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3784"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jycyHF\u002Bb0YKWn9iqNC\u002BSYS5xT2e8STOGIjGnFXgpIPk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 23:03:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/registro.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registro.js'))</AssetFile>
