@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-var connection = new signalR.HubConnectionBuilder().withUrl("/conversacionhub").build(); // Chathub mapeado en Program.cs. Creamos la conexion inicial al chathub
+var connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build(); // Chathub mapeado en Program.cs. Creamos la conexion inicial al chathub
 
 
 
@@ -60,9 +60,7 @@ connection.start().then(function () {
                
                 listaMensajes.appendChild(li);
             })
-                .catch(function (err) {
-                    console.error("Error al obtener el último mensaje:", err.toString());
-                });
+
         })
     
 
@@ -71,10 +69,11 @@ connection.start().then(function () {
 });
 
 document.getElementById("btnEnviarMensaje").addEventListener("click", async function () {
-    var mensaje = document.getElementById("inputMensaje");
-    
+    var mensaje = document.getElementById("inputMensaje").value;
+    console.log(idConversacion);
+    console.log(mensaje);
     try {
-        await connection.invoke("EnviarMensaje", mensaje, user);
+        await connection.invoke("EnviarMensaje", idConversacion, mensaje, usuarioRegistrado,usuario2);
         
     } catch (error) {
         console.error('Error al enviar mensaje:', error);

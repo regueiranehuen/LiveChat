@@ -2,15 +2,15 @@
 
 <script>
 
-	var idConversacion = '@TempData["conversacion"]';
-	var usuario='@TempData["usuario"]';
+	var idConversacion = '@TempData["idConversacion"]';
+	var usuarioRegistrado = "@ViewBag.Usuario";
 	let usuarios =idConversacion.split(",");
 
 	console.log("Usuario 1:" + usuarios[0]);
 	console.log("Usuario 2:" + usuarios[1]);
 
 	var usuario2;
-	if (usuarios[0] === usuario){
+	if (usuarios[0] === usuarioRegistrado){
 		usuario2 = usuarios[1];
 	}else{
 		usuario2 = usuarios[0];

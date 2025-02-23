@@ -13,6 +13,11 @@ namespace LiveChat
             _conversacionRepository = conversacionRepository;
         }
 
+        public async Task<List<Mensaje>> ObtenerMensajesDeConversacion(string idConversacion)
+        {
+            return await _conversacionRepository.GetMensajesDeConversacion(idConversacion);
+        }
+
         public async Task SendMessage(string user, string message)
         {
             // Clients.All devuelve todos los clientes conectados
@@ -27,14 +32,17 @@ namespace LiveChat
 
 
         // Acá habria que hacer que el mensaje recibido x parámetro sea un string, el objeto Mensaje hay que crearlo dentro de la función
-        public async Task EnviarMensaje(Mensaje mensaje, string destinatario)
+        public async Task EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
         {
-            
+
+            Mensaje mensaje = new Mensaje(idConversacion, emisor, destinatario, textoMensaje, DateTime.Now);
+
             string connectionId = ConversacionHub.Usuarios.FirstOrDefault(usuario => usuario.Equals(destinatario)).ToString();
 
             if (connectionId != null)
             {
                 // Envía el mensaje al usuario destino
+                System.Diagnostics.Debug.WriteLine("El destinatario esta conectado");
                 await Clients.Client(connectionId).SendAsync("RecibirMensaje", mensaje);
             }
             else

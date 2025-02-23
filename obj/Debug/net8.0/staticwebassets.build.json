@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qMNYhIfX2l0B4nrS9Md6Y7b2y1KNd2MSbnQLkeBkpcs=",
+  "Hash": "GJezPq4LL0HV3sUMvtiuo7EKQRv0H31CA7vINyNJhk8=",
   "Source": "LiveChat",
   "BasePath": "_content/LiveChat",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8a9om4l4tp",
-      "Integrity": "AAV6mgZ0vu2Wm4CA0Ac1gN6mCCFJA08v8hqfqCagmMc=",
+      "Fingerprint": "o2oo4czh6m",
+      "Integrity": "IMz4OtCTSguHj/c7eoYs7NSj0dafyKP3HxKeO3o71h0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chatPrivado.js"
@@ -6166,51 +6166,6 @@
       ]
     },
     {
-      "Route": "js/chatPrivado.8a9om4l4tp.js",
-      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3683"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AAV6mgZ0vu2Wm4CA0Ac1gN6mCCFJA08v8hqfqCagmMc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 04:37:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8a9om4l4tp"
-        },
-        {
-          "Name": "label",
-          "Value": "js/chatPrivado.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AAV6mgZ0vu2Wm4CA0Ac1gN6mCCFJA08v8hqfqCagmMc="
-        }
-      ]
-    },
-    {
       "Route": "js/chatPrivado.js",
       "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
       "Selectors": [],
@@ -6221,7 +6176,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3683"
+          "Value": "3171"
         },
         {
           "Name": "Content-Type",
@@ -6229,11 +6184,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AAV6mgZ0vu2Wm4CA0Ac1gN6mCCFJA08v8hqfqCagmMc=\""
+          "Value": "\"IMz4OtCTSguHj/c7eoYs7NSj0dafyKP3HxKeO3o71h0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 04:37:56 GMT"
+          "Value": "Sun, 23 Feb 2025 14:00:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6243,7 +6198,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AAV6mgZ0vu2Wm4CA0Ac1gN6mCCFJA08v8hqfqCagmMc="
+          "Value": "sha256-IMz4OtCTSguHj/c7eoYs7NSj0dafyKP3HxKeO3o71h0="
+        }
+      ]
+    },
+    {
+      "Route": "js/chatPrivado.o2oo4czh6m.js",
+      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3171"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IMz4OtCTSguHj/c7eoYs7NSj0dafyKP3HxKeO3o71h0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 14:00:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o2oo4czh6m"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chatPrivado.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IMz4OtCTSguHj/c7eoYs7NSj0dafyKP3HxKeO3o71h0="
         }
       ]
     },

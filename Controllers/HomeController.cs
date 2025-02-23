@@ -4,13 +4,14 @@ using LiveChat.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace LiveChat.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : CustomController
     {
         private readonly ILogger<HomeController> _logger;
-
+        
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -63,25 +64,21 @@ namespace LiveChat.Controllers
 
         public IActionResult Conversaciones()
         {
-            var usuario = User.Identity.Name;  // Leer el usuario autenticado desde la cookie
-
-            if (string.IsNullOrEmpty(usuario))
-            {
-                return RedirectToAction("Index");  // Si no hay usuario, redirigir al login
-            }
-
-            Debug.WriteLine("Usuario autenticado: " + usuario);
-            ViewBag.Usuario = usuario;
-            return View();
+            return ControlarLogueo();
         }
 
-        public IActionResult Chat(string conversacion, string usuario)
+        public IActionResult Chat(string conversacion)
         {
-            TempData["conversacion"] = conversacion;
-            TempData["usuario"]= usuario;
-            System.Diagnostics.Debug.WriteLine("id conversacion: " + conversacion);
-            System.Diagnostics.Debug.WriteLine("usuario: " + usuario);
-            return View();
+
+            if (LogueoHecho())
+            {
+                ViewBag.Usuario = User.Identity.Name;
+                TempData["idConversacion"] = conversacion;
+                return View();
+            }
+            return RedirectToAction("Index");
+
+           
         }
 
         public IActionResult Privacy()

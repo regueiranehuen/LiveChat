@@ -41,20 +41,9 @@ namespace LiveChat
             return await _conversacionRepository.ObtenerConversacionesPorUsuario(username);
         }
 
-        public async Task<List<Mensaje>>ObtenerMensajesDeConversacion(string idConversacion)
-        {
-            return await _conversacionRepository.GetMensajesDeConversacion(idConversacion);
-        }
+        
 
-        // Se asume que la conversacion existe
-        public string ObtenerIdConversacionPorUsuarios(string usuario1, string usuario2)
-        {
-            if (_conversacionRepository.ExisteConversacion(usuario1, usuario2)!=null)
-            {
-                return _conversacionRepository.CrearIdConversacion(usuario1, usuario2);
-            }
-            return _conversacionRepository.CrearIdConversacion(usuario2, usuario1);
-        }
+        
 
 
         public async Task <Conversacion?> ExisteConversacion(string usuario1, string usuario2)

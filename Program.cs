@@ -93,6 +93,7 @@ app.MapRazorPages(); // Solo si estás usando Razor Pages
 
 app.MapHub<UsuarioHub>("/usuariohub");
 app.MapHub<ConversacionHub>("/conversacionhub");
+app.MapHub<ChatHub>("/chathub");
 
 
 
