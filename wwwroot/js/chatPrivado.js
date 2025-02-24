@@ -11,13 +11,17 @@ connection.on("connected", function () {
 });
 
 
+console.log("Suscribiendo evento RecibirMensaje...");
+
 connection.on("RecibirMensaje", function (mensaje) { // Al recibir el evento SendMessage, el cliente va a recibir el mensaje y agregarlo a la lista de mensajes
+    let listaMensajes = document.getElementById("listaMensajes");
     var li = document.createElement("li"); // List
-    document.getElementById("listaMensajes").appendChild(li); // Agregamos el mensaje a la lista de mensajes
+    
     // We can assign user-supplied strings to an element's textContent because it
     // is not interpreted as markup. If you're assigning in any other way, you
     // should be aware of possible script injection concerns.
     li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
+    listaMensajes.appendChild(li); // Agregamos el mensaje a la lista de mensajes
 });
 
 // Evento cuando la conexión se cierra
@@ -55,7 +59,7 @@ connection.start().then(function () {
 
                 // Obtener el último mensaje de cada conversación
 
-                li.textContent = mensaje.emisor + ": " + mensaje.texto + " " + mensaje.fecha;
+                li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
                 // Agregar un event listener al li
                
                 listaMensajes.appendChild(li);
@@ -69,12 +73,21 @@ connection.start().then(function () {
 });
 
 document.getElementById("btnEnviarMensaje").addEventListener("click", async function () {
-    var mensaje = document.getElementById("inputMensaje").value;
+    var textoMensaje = document.getElementById("inputMensaje").value;
     console.log(idConversacion);
-    console.log(mensaje);
+    console.log(textoMensaje);
     try {
-        await connection.invoke("EnviarMensaje", idConversacion, mensaje, usuarioRegistrado,usuario2);
+        let listaMensajes = document.getElementById("listaMensajes");
+        let mensaje = await connection.invoke("EnviarMensaje", idConversacion, textoMensaje, usuarioRegistrado, usuario2);
         
+        let li = document.createElement("li");
+
+
+        li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
+        // Agregar un event listener al li
+
+        listaMensajes.appendChild(li);
+
     } catch (error) {
         console.error('Error al enviar mensaje:', error);
         alert("Hubo un error al enviar mensaje");

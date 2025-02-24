@@ -19,6 +19,12 @@ namespace LiveChat.Controllers
 
         public IActionResult Index()
         {
+            /*if (LogueoHecho())
+            {
+                return RedirectToAction("Conversaciones"); // no tengo que iniciar sesión de nuevo si es que ya se guardó mi usuario en cookies
+            }*/
+
+
             return View();
         }
 

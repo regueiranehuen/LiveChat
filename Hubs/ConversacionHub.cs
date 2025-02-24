@@ -14,26 +14,7 @@ namespace LiveChat
             _conversacionRepository = conversacionRepository;
         }
 
-        public static ConcurrentDictionary<string, string> Usuarios = new ConcurrentDictionary<string, string>();
         
-        public override async Task OnConnectedAsync()
-        {
-            string usuario = Context.User.Identity.Name; // Obtener usuario autenticado
-            string connectionId = Context.ConnectionId; // Obtener ID de conexión
-
-            if (!string.IsNullOrEmpty(usuario))
-            {
-                Usuarios.TryAdd(connectionId, usuario);
-            }
-
-            await base.OnConnectedAsync();
-        }
-
-        public override async Task OnDisconnectedAsync(Exception? exception)
-        {
-            Usuarios.TryRemove(Context.ConnectionId, out _);
-            await base.OnDisconnectedAsync(exception);
-        }
 
         public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)
         {

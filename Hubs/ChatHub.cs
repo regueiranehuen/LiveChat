@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using System.Collections.Concurrent;
+using Microsoft.AspNetCore.SignalR;
 
 
 namespace LiveChat
@@ -11,6 +12,31 @@ namespace LiveChat
         public ChatHub(ConversacionRepository conversacionRepository)
         {
             _conversacionRepository = conversacionRepository;
+        }
+
+
+        public static ConcurrentDictionary<string, string> Usuarios = new ConcurrentDictionary<string, string>();
+
+        public override async Task OnConnectedAsync()
+        {
+            string usuario = Context.User.Identity.Name; // Obtener usuario autenticado
+            string connectionId = Context.ConnectionId; // Obtener ID de conexión
+
+            System.Diagnostics.Debug.WriteLine("usuario sigma:" + usuario);
+            System.Diagnostics.Debug.WriteLine("connection id sigma:" + connectionId);
+
+            if (!string.IsNullOrEmpty(usuario))
+            {
+                Usuarios[usuario] = connectionId;
+            }
+
+            await base.OnConnectedAsync();
+        }
+
+        public override async Task OnDisconnectedAsync(Exception? exception)
+        {
+            Usuarios.TryRemove(Context.ConnectionId, out _);
+            await base.OnDisconnectedAsync(exception);
         }
 
         public async Task<List<Mensaje>> ObtenerMensajesDeConversacion(string idConversacion)
@@ -32,18 +58,21 @@ namespace LiveChat
 
 
         // Acá habria que hacer que el mensaje recibido x parámetro sea un string, el objeto Mensaje hay que crearlo dentro de la función
-        public async Task EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
+        public async Task<Mensaje> EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
         {
 
             Mensaje mensaje = new Mensaje(idConversacion, emisor, destinatario, textoMensaje, DateTime.Now);
 
-            string connectionId = ConversacionHub.Usuarios.FirstOrDefault(usuario => usuario.Equals(destinatario)).ToString();
+            
 
-            if (connectionId != null)
+            if (Usuarios.TryGetValue(destinatario, out string connectionId))
             {
-                // Envía el mensaje al usuario destino
-                System.Diagnostics.Debug.WriteLine("El destinatario esta conectado");
+                
+
+                System.Diagnostics.Debug.WriteLine($"Enviando mensaje a connectionId: {connectionId}");
                 await Clients.Client(connectionId).SendAsync("RecibirMensaje", mensaje);
+                System.Diagnostics.Debug.WriteLine($"Mensaje enviado a {connectionId}");
+
             }
             else
             {
@@ -52,6 +81,8 @@ namespace LiveChat
 
             await _conversacionRepository.AgregarMensajeAColeccionMensajes(mensaje);
             await _conversacionRepository.AgregarMensajeAConversacion(mensaje.IdConversacion,mensaje);
+
+            return mensaje;
             
 
 

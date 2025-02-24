@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o2oo4czh6m</Fingerprint>
-      <Integrity>IMz4OtCTSguHj/c7eoYs7NSj0dafyKP3HxKeO3o71h0=</Integrity>
+      <Fingerprint>sdminfhctx</Fingerprint>
+      <Integrity>MJvp4vBeFXepz1L2cnfGzqATOxRTiEPcPtCDM3e3VI8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chatPrivado.js'))</OriginalItemSpec>
