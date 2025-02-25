@@ -1,17 +1,20 @@
 ﻿using System.Collections.Concurrent;
+using System.Runtime.ConstrainedExecution;
 using Microsoft.AspNetCore.SignalR;
+using MongoDB.Driver.Core.Connections;
 
 
 namespace LiveChat
 {
     public class ChatHub : Hub
     {
-
+        
         private ConversacionRepository _conversacionRepository;
-
-        public ChatHub(ConversacionRepository conversacionRepository)
+        private IHubContext<ConversacionHub> _conversacionHubContext;
+        public ChatHub(ConversacionRepository conversacionRepository, IHubContext<ConversacionHub> conversacionHubContext)
         {
             _conversacionRepository = conversacionRepository;
+            _conversacionHubContext = conversacionHubContext;
         }
 
 
@@ -44,41 +47,39 @@ namespace LiveChat
             return await _conversacionRepository.GetMensajesDeConversacion(idConversacion);
         }
 
-        public async Task SendMessage(string user, string message)
-        {
-            // Clients.All devuelve todos los clientes conectados
 
-
-            //Console.WriteLine($"juju mensajito: {message}");
-            await Clients.All.SendAsync("ReceiveMessage", user, message, DateTime.Now); // A quien sea que esté conectado, enviarle el método ReceiveMessage
-
-            // Si se quiere enviar un mensaje a un usuario en especifico
-            //await Clients.User("userId").SendAsync("ReceiveMessage", user, message);
-        }
-
-
-        // Acá habria que hacer que el mensaje recibido x parámetro sea un string, el objeto Mensaje hay que crearlo dentro de la función
         public async Task<Mensaje> EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
         {
 
             Mensaje mensaje = new Mensaje(idConversacion, emisor, destinatario, textoMensaje, DateTime.Now);
 
-            
+            bool usuarioConectado = false;
 
+            // Si el usuario está conectado al ChatHub
             if (Usuarios.TryGetValue(destinatario, out string connectionId))
             {
-                
-
-                System.Diagnostics.Debug.WriteLine($"Enviando mensaje a connectionId: {connectionId}");
+                usuarioConectado = true;
                 await Clients.Client(connectionId).SendAsync("RecibirMensaje", mensaje);
-                System.Diagnostics.Debug.WriteLine($"Mensaje enviado a {connectionId}");
-
             }
-            else
+            // Si el usuario está conectado al ConversacionHub (Si está en la pestaña de conversaciones)
+            if (ConversacionHub.Usuarios.TryGetValue(destinatario, out string connectionId2))
             {
-                System.Diagnostics.Debug.WriteLine("El cliente no está conectado, pero guardamos igualmente el mensaje en la BD");
+                usuarioConectado = true;
+                await _conversacionHubContext.Clients.Client(connectionId2).SendAsync("RecibirMensaje", mensaje);
             }
 
+            if (usuarioConectado)
+            {
+                usuarioConectado = false;
+                goto final;
+            }
+                
+            // Si el cliente no está conectado a ningún hub
+            System.Diagnostics.Debug.WriteLine("El cliente no está conectado a ningun hub, pero guardamos igualmente el mensaje en la BD");
+
+
+
+            final:
             await _conversacionRepository.AgregarMensajeAColeccionMensajes(mensaje);
             await _conversacionRepository.AgregarMensajeAConversacion(mensaje.IdConversacion,mensaje);
 

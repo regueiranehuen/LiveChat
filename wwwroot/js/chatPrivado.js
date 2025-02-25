@@ -14,14 +14,19 @@ connection.on("connected", function () {
 console.log("Suscribiendo evento RecibirMensaje...");
 
 connection.on("RecibirMensaje", function (mensaje) { // Al recibir el evento SendMessage, el cliente va a recibir el mensaje y agregarlo a la lista de mensajes
+
+   
     let listaMensajes = document.getElementById("listaMensajes");
-    var li = document.createElement("li"); // List
+
     
-    // We can assign user-supplied strings to an element's textContent because it
-    // is not interpreted as markup. If you're assigning in any other way, you
-    // should be aware of possible script injection concerns.
+
+    var li = document.createElement("li");
+    li.id = mensaje.idConversacion;
+    console.log(mensaje.idConversacion);
     li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
-    listaMensajes.appendChild(li); // Agregamos el mensaje a la lista de mensajes
+    listaMensajes.appendChild(li);
+
+
 });
 
 // Evento cuando la conexión se cierra
@@ -56,7 +61,8 @@ connection.start().then(function () {
             // Iterar sobre la lista de conversaciones obtenida
             mensajes.forEach(mensaje => {
                 let li = document.createElement("li");
-
+                li.id = idConversacion;
+                console.log(idConversacion);
                 // Obtener el último mensaje de cada conversación
 
                 li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
@@ -81,12 +87,14 @@ document.getElementById("btnEnviarMensaje").addEventListener("click", async func
         let mensaje = await connection.invoke("EnviarMensaje", idConversacion, textoMensaje, usuarioRegistrado, usuario2);
         
         let li = document.createElement("li");
-
+        li.id = idConversacion;
 
         li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
         // Agregar un event listener al li
 
         listaMensajes.appendChild(li);
+
+        document.getElementById("inputMensaje").value = "";
 
     } catch (error) {
         console.error('Error al enviar mensaje:', error);

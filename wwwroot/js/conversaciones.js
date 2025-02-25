@@ -10,28 +10,35 @@ connection.on("connected", function () {
 });
 
 connection.on("RecibirMensaje", function (mensaje) { // Al recibir el evento SendMessage, el cliente va a recibir el mensaje y agregarlo a la lista de mensajes
-    var li = document.createElement("li"); // List
-    document.getElementById("listaMensajes").appendChild(li); // Agregamos el mensaje a la lista de mensajes
+    let listaMensajes = document.getElementById("listaMensajes");
+    
 
 
-    // Obtener el último mensaje de cada conversación
+    let conversacionExistente = document.getElementById(mensaje.idConversacion);
+    if (conversacionExistente) {
+        console.log("Actualizando conversacion existente con ID:", mensaje.idConversacion);
+        conversacionExistente.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
+    } else {
+        console.log("Creando nueva conversacion con ID:", mensaje.idConversacion);
 
-    li.textContent = mensaje.emisor + ": " + mensaje.texto + " " + mensaje.fecha;
-   
+        var li = document.createElement("li");
+        li.id = mensaje.idConversacion; // Asignar ID
+        li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
+
+        console.log("Elemento creado:", li); // Verificar si tiene ID
+        // Agregar un event listener al li
+        li.addEventListener("click", function () {
+
+            // Reemplazar el placeholder con el valor real del usuario
+            var url = urlTemplate.replace('__conversacion__', encodeURIComponent(conversacion.id)).replace('__usuario__', encodeURIComponent(usuario));
+            // Redirigir
+            window.location.href = url;
+
+        });
+        listaMensajes.appendChild(li);
+    }
 
 
-    // Agregar un event listener al li
-    li.addEventListener("click", function () {
-
-        alert(`Clickeaste en la conversación con id ${conversacion.id}`);
-        alert(`usuario: ${usuario}`)
-        // Reemplazar el placeholder con el valor real del usuario
-        var url = urlTemplate.replace('__conversacion__', encodeURIComponent(conversacion.id)).replace('__usuario__', encodeURIComponent(usuario));
-        // Redirigir
-        window.location.href = url;
-
-    });
-    listaMensajes.appendChild(li);
 });
 
 // Evento cuando la conexión se cierra
@@ -65,10 +72,13 @@ connection.start().then(function () {
             // Iterar sobre la lista de conversaciones obtenida
             conversaciones.forEach(conversacion => {
                 let li = document.createElement("li");
+                console.log(conversacion);
+
+                li.id = conversacion.id;
 
                 // Obtener el último mensaje de cada conversación
-                if (conversacion.ultimoMensaje.texto != null) {
-                    li.textContent = conversacion.ultimoMensaje.emisor + ": " + conversacion.ultimoMensaje.texto + " " + conversacion.ultimoMensaje.fecha;
+                if (conversacion.ultimoMensaje) {
+                    li.textContent = `(${conversacion.ultimoMensaje.fecha}) ${conversacion.ultimoMensaje.emisor}: ${conversacion.ultimoMensaje.texto}`;
                 } else {
                     li.textContent = conversacion.ultimoMensaje.emisor;
                 }
@@ -76,8 +86,7 @@ connection.start().then(function () {
                 // Agregar un event listener al li
                 li.addEventListener("click", function () {
                     
-                    alert(`Clickeaste en la conversación con id ${conversacion.id}`);
-                    alert(`usuario: ${usuario}`)
+                   
                     // Reemplazar el placeholder con el valor real del usuario
                     var url = urlTemplate.replace('__conversacion__', encodeURIComponent(conversacion.id)).replace('__usuario__', encodeURIComponent(usuario));
                     // Redirigir
@@ -86,14 +95,10 @@ connection.start().then(function () {
                 });
                 listaMensajes.appendChild(li);
             })
-                .catch(function (err) {
-                    console.error("Error al obtener el último mensaje:", err.toString());
-                });
+
         })
 
-        .catch(function (err) {
-            console.error("Error al obtener conversaciones:", err.toString());
-        });
+      
 
 }).catch(function (err) {
     console.error("Error al conectar con el Hub:", err.toString());
@@ -119,7 +124,6 @@ document.getElementById("btnIniciarConversacion").addEventListener("click", asyn
                 let idConversacion = conversacionCreada.id || conversacionCreada._id;
 
                 if (idConversacion) {
-                    alert("ID de conversación: " + idConversacion);
                     var url = urlTemplate.replace('__conversacion__', encodeURIComponent(idConversacion)).replace('__usuario__', encodeURIComponent(usuario));
                     // Redirigir
                     window.location.href = url;

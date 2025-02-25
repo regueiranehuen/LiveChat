@@ -8,13 +8,40 @@ namespace LiveChat
     {
         private ConversacionRepository _conversacionRepository;
 
-
         public ConversacionHub(ConversacionRepository conversacionRepository)
         {
             _conversacionRepository = conversacionRepository;
         }
 
-        
+                                         // Clave, valor
+        public static ConcurrentDictionary<string, string> Usuarios = new ConcurrentDictionary<string, string>();
+        //public static ConcurrentDictionary<string, ConversacionHub> HubsConversaciones = new ConcurrentDictionary<string, ConversacionHub>(); // Con esto solo admito que el usuario tenga una pestaña abierta con las conversaciones funcionando bien
+        // public static ConcurrentDictionary<string, List<ConversacionHub>> HubsConversaciones = new ConcurrentDictionary<string, List<ConversacionHub>>();  /// Si quisiera permitir varias pestañas
+
+        public override async Task OnConnectedAsync()
+        {
+            string usuario = Context.User.Identity.Name; // Obtener usuario autenticado
+            string connectionId = Context.ConnectionId; // Obtener ID de conexión
+
+            System.Diagnostics.Debug.WriteLine("usuario sigma:" + usuario);
+            System.Diagnostics.Debug.WriteLine("connection id sigma:" + connectionId);
+
+            if (!string.IsNullOrEmpty(usuario))
+            {
+                Usuarios[usuario] = connectionId;
+                //HubsConversaciones[usuario] = this;
+            }
+
+            await base.OnConnectedAsync();
+        }
+
+        public override async Task OnDisconnectedAsync(Exception? exception)
+        {
+            Usuarios.TryRemove(Context.ConnectionId, out _);
+            //HubsConversaciones.TryRemove(Context.ConnectionId, out _);
+            await base.OnDisconnectedAsync(exception);
+        }
+
 
         public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)
         {
