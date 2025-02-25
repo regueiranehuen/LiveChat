@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\wwwroot\\js\\conversaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:wwwroot\\js\\conversaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\wwwroot\\js\\chatprivado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:wwwroot\\js\\chatprivado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\views\\home\\conversaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:views\\home\\conversaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\hubs\\conversacionhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,20 +27,16 @@
       "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\mensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:mensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\controllers\\customcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:controllers\\customcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\wwwroot\\js\\conversaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:wwwroot\\js\\conversaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectosdesktopapps\\proyectosasp.net\\livechat\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,86 +46,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1244,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "conversaciones.js",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\conversaciones.js",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
-              "RelativeToolTip": "wwwroot\\js\\conversaciones.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-25T04:19:44.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T04:02:05.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Mensaje.cs",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Mensaje.cs",
-              "RelativeDocumentMoniker": "Mensaje.cs",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Mensaje.cs",
-              "RelativeToolTip": "Mensaje.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:53:28.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "chatPrivado.js",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\chatPrivado.js",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
-              "RelativeToolTip": "wwwroot\\js\\chatPrivado.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-24T02:17:42.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConversacionHub.cs",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
-              "RelativeDocumentMoniker": "Hubs\\ConversacionHub.cs",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
-              "RelativeToolTip": "Hubs\\ConversacionHub.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowCoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T02:10:12.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ChatHub.cs",
-              "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ChatHub.cs",
-              "RelativeToolTip": "Hubs\\ChatHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T01:21:25.187Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -126,9 +56,113 @@
               "RelativeDocumentMoniker": "Views\\Home\\Chat.cshtml",
               "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Views\\Home\\Chat.cshtml",
               "RelativeToolTip": "Views\\Home\\Chat.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T15:58:41.124Z",
+              "WhenOpened": "2025-02-25T16:25:07.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Conversaciones.cshtml",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Views\\Home\\Conversaciones.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Conversaciones.cshtml",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Views\\Home\\Conversaciones.cshtml",
+              "RelativeToolTip": "Views\\Home\\Conversaciones.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T16:19:00.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "conversaciones.js",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\conversaciones.js",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
+              "RelativeToolTip": "wwwroot\\js\\conversaciones.js",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAiwGwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-25T05:20:36.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "chatPrivado.js",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\chatPrivado.js",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
+              "RelativeToolTip": "wwwroot\\js\\chatPrivado.js",
+              "ViewState": "AgIAACgAAAAAAAAAAAAqwDcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-25T05:18:01.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Hubs\\ChatHub.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T05:12:46.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConversacionHub.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\ConversacionHub.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
+              "RelativeToolTip": "Hubs\\ConversacionHub.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAnwEIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T04:54:27.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAowGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T04:50:33.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomController.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Controllers\\CustomController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomController.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Controllers\\CustomController.cs",
+              "RelativeToolTip": "Controllers\\CustomController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T04:49:06.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAawFMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T04:48:38.809Z",
               "EditorCaption": ""
             }
           ]

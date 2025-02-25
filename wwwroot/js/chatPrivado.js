@@ -55,6 +55,10 @@ connection.start().then(function () {
 
     connection.invoke("ObtenerMensajesDeConversacion", idConversacion)
         .then(mensajes => {
+            if (!mensajes) {
+                console.log("Buen intento Alan Turing");
+                return; 
+            }
             let listaMensajes = document.getElementById("listaMensajes");
             listaMensajes.innerHTML = ""; // Limpiar la lista antes de agregar nuevos elementos
 

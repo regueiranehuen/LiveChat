@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Pmycppwl/9jC467PQLQJFdoFFZkqXhwKj7a6fLU4QMc=",
+  "Hash": "XugnvNw/durLsZWrZafJ+SdxFa50zRNABbT11RqPBvY=",
   "Source": "LiveChat",
   "BasePath": "_content/LiveChat",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cfipfv440j",
-      "Integrity": "eEtyGSbU0T+Eh9DFvwWRXhaHBqfaAJz1TGbMg8DVDas=",
+      "Fingerprint": "euvxjjj9ic",
+      "Integrity": "ilE2v7SUiQusLD+pJfENKd3lRsJLUNTH9/XRCXxVzhw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chatPrivado.js"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jrdoxbnd2v",
-      "Integrity": "UScaYcc0/y2yZPA17VpqqN83p3voThD2HUypvkqDM8M=",
+      "Fingerprint": "x6qrqwv3gv",
+      "Integrity": "WUfsjkPyw/YyqyCFcTieREeybRPiTDRx0Hs3vN0C+GM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\conversaciones.js"
@@ -6166,7 +6166,7 @@
       ]
     },
     {
-      "Route": "js/chatPrivado.cfipfv440j.js",
+      "Route": "js/chatPrivado.euvxjjj9ic.js",
       "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6176,7 +6176,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3589"
+          "Value": "3717"
         },
         {
           "Name": "Content-Type",
@@ -6184,11 +6184,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eEtyGSbU0T+Eh9DFvwWRXhaHBqfaAJz1TGbMg8DVDas=\""
+          "Value": "\"ilE2v7SUiQusLD+pJfENKd3lRsJLUNTH9/XRCXxVzhw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 04:35:29 GMT"
+          "Value": "Tue, 25 Feb 2025 05:34:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6198,7 +6198,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "cfipfv440j"
+          "Value": "euvxjjj9ic"
         },
         {
           "Name": "label",
@@ -6206,7 +6206,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eEtyGSbU0T+Eh9DFvwWRXhaHBqfaAJz1TGbMg8DVDas="
+          "Value": "sha256-ilE2v7SUiQusLD+pJfENKd3lRsJLUNTH9/XRCXxVzhw="
         }
       ]
     },
@@ -6221,7 +6221,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3589"
+          "Value": "3717"
         },
         {
           "Name": "Content-Type",
@@ -6229,11 +6229,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eEtyGSbU0T+Eh9DFvwWRXhaHBqfaAJz1TGbMg8DVDas=\""
+          "Value": "\"ilE2v7SUiQusLD+pJfENKd3lRsJLUNTH9/XRCXxVzhw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 04:35:29 GMT"
+          "Value": "Tue, 25 Feb 2025 05:34:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6243,52 +6243,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eEtyGSbU0T+Eh9DFvwWRXhaHBqfaAJz1TGbMg8DVDas="
-        }
-      ]
-    },
-    {
-      "Route": "js/conversaciones.jrdoxbnd2v.js",
-      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6029"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"UScaYcc0/y2yZPA17VpqqN83p3voThD2HUypvkqDM8M=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 17:27:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jrdoxbnd2v"
-        },
-        {
-          "Name": "label",
-          "Value": "js/conversaciones.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-UScaYcc0/y2yZPA17VpqqN83p3voThD2HUypvkqDM8M="
+          "Value": "sha256-ilE2v7SUiQusLD+pJfENKd3lRsJLUNTH9/XRCXxVzhw="
         }
       ]
     },
@@ -6303,7 +6258,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6029"
+          "Value": "6548"
         },
         {
           "Name": "Content-Type",
@@ -6311,11 +6266,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UScaYcc0/y2yZPA17VpqqN83p3voThD2HUypvkqDM8M=\""
+          "Value": "\"WUfsjkPyw/YyqyCFcTieREeybRPiTDRx0Hs3vN0C+GM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 17:27:27 GMT"
+          "Value": "Tue, 25 Feb 2025 16:31:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6325,7 +6280,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UScaYcc0/y2yZPA17VpqqN83p3voThD2HUypvkqDM8M="
+          "Value": "sha256-WUfsjkPyw/YyqyCFcTieREeybRPiTDRx0Hs3vN0C+GM="
+        }
+      ]
+    },
+    {
+      "Route": "js/conversaciones.x6qrqwv3gv.js",
+      "AssetFile": "C:\\Users\\nehue\\Escritorio\\Programacion\\ProyectosDesktopApps\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6548"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WUfsjkPyw/YyqyCFcTieREeybRPiTDRx0Hs3vN0C+GM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Feb 2025 16:31:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x6qrqwv3gv"
+        },
+        {
+          "Name": "label",
+          "Value": "js/conversaciones.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WUfsjkPyw/YyqyCFcTieREeybRPiTDRx0Hs3vN0C+GM="
         }
       ]
     },

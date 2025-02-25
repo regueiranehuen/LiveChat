@@ -42,18 +42,37 @@ namespace LiveChat
             await base.OnDisconnectedAsync(exception);
         }
 
-        public async Task<List<Mensaje>> ObtenerMensajesDeConversacion(string idConversacion)
+        public async Task<List<Mensaje>?> ObtenerMensajesDeConversacion(string idConversacion)
         {
+            // Evitar que se pasen de vivos modificando codigo JS
+            string[] usuarios = idConversacion.Split(',');
+            string usuarioAutenticado = Context.User.Identity.Name;
+
+            if (!usuarioAutenticado.Equals(usuarios[0]) && !usuarioAutenticado.Equals(usuarios[1]))
+            {
+                return null;
+            }
+
             return await _conversacionRepository.GetMensajesDeConversacion(idConversacion);
         }
 
 
-        public async Task<Mensaje> EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
+        public async Task<Mensaje?> EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
         {
 
             Mensaje mensaje = new Mensaje(idConversacion, emisor, destinatario, textoMensaje, DateTime.Now);
 
             bool usuarioConectado = false;
+
+            // Evitar que se pasen de vivos modificando código JS
+            string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
+
+            if (_conversacionRepository.ExisteConversacion(emisor, destinatario) == null || !emisor.Equals(usuarioAutenticado)) 
+            {
+                return null;
+            }
+
+
 
             // Si el usuario está conectado al ChatHub
             if (Usuarios.TryGetValue(destinatario, out string connectionId))

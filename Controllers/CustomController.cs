@@ -1,10 +1,20 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace LiveChat.Controllers
 {
     public class CustomController : Controller
     {
+
+        private readonly IHubContext<ConversacionHub> _conversacionHubContext;
+
+        public CustomController(IHubContext<ConversacionHub> conversacionHubContext)
+        {
+            _conversacionHubContext = conversacionHubContext;
+        }
+
+
         public IActionResult ControlarLogueo()
         {
             var usuario = User.Identity.Name;
@@ -26,6 +36,29 @@ namespace LiveChat.Controllers
             }
             return true;
         }
+
+        public bool ConversacionExistenteYCorrespondiente(string idConversacion) 
+        {
+            string[] usuarios = idConversacion.Split(',');
+            // Evitar viveza con JS
+            MongoDBConnection m = new MongoDBConnection();
+            ConversacionRepository c = new ConversacionRepository(m);
+            ConversacionHub cH = new ConversacionHub(c);
+
+            string usuarioAutenticado = User.Identity.Name;
+
+            if (!usuarioAutenticado.Equals(usuarios[0]) && !usuarioAutenticado.Equals(usuarios[1]))
+            {
+                return false; // si bien puede existir la conversacion, no es incumbencia del usuario que me mandó javascript si es así
+            }
+
+
+
+
+            return cH.ExisteConversacion(usuarios[0], usuarios[1]) != null;
+
+        }
+
 
         
     }

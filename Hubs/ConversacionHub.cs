@@ -43,8 +43,12 @@ namespace LiveChat
         }
 
 
-        public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)
+        public async Task<List<Conversacion>?> ObtenerConversacionesPorUsuario(string username)
         {
+            // Evitamos vivezas en JS
+            string usuario = Context.User.Identity.Name; // Obtener usuario autenticado
+            if (!username.Equals(usuario))
+                return null;
 
             return await _conversacionRepository.ObtenerConversacionesPorUsuario(username);
         }
@@ -56,14 +60,18 @@ namespace LiveChat
 
         public async Task <Conversacion?> ExisteConversacion(string usuario1, string usuario2)
         {
+            
             return await _conversacionRepository.ExisteConversacion(usuario1, usuario2); // Si existe la conversacion simplemente la abrimos
         }
 
         public async Task<Conversacion?> CrearConversacion(string usuario1, string usuario2) // La conversacion puede crearse o no dependiendo de si el usuario buscado existe o no
         {
-            UsuarioRepository usuarioRepository = new UsuarioRepository(new MongoDBConnection());
+            string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
+            
 
-            if (await usuarioRepository.ObtenerUsuarioPorUsername(usuario2) == null) // solo chequeo el usuario2 porque el usuario1 ya esta logueado
+            UsuarioRepository usuarioRepository = new UsuarioRepository(new MongoDBConnection()); // Cambiarlo por inyección
+
+            if (await usuarioRepository.ObtenerUsuarioPorUsername(usuario2) == null || !usuario1.Equals(usuarioAutenticado) || usuario2.Equals(usuarioAutenticado)) // Evitar que se pasen de vivos modificando codigo JS
             {
                 return null; // El usuario buscado no existe y no se puede crear la conversacion
             }

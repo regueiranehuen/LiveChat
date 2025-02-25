@@ -23,7 +23,18 @@ connection.on("RecibirMensaje", function (mensaje) { // Al recibir el evento Sen
 
         var li = document.createElement("li");
         li.id = mensaje.idConversacion; // Asignar ID
-        li.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
+
+        let usuarios = mensaje.idConversacion.split(",");
+
+        let contacto;
+
+        if (usuarios[0] != usuario) {
+            contacto = usuarios[0];
+        } else {
+            contacto = usuarios[1];
+        }
+
+        li.textContent = `(chat con ${contacto})(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
 
         console.log("Elemento creado:", li); // Verificar si tiene ID
         // Agregar un event listener al li
@@ -66,6 +77,12 @@ connection.start().then(function () {
     // Invocar el método y manejarlo correctamente con `.then`
     connection.invoke("ObtenerConversacionesPorUsuario", usuario)
         .then(conversaciones => {
+
+            if (!conversaciones) {
+                console.log("no cambies el nombre de usuario mr robot");
+                return;
+            }
+
             let listaMensajes = document.getElementById("listaMensajes");
             listaMensajes.innerHTML = ""; // Limpiar la lista antes de agregar nuevos elementos
 
@@ -76,11 +93,22 @@ connection.start().then(function () {
 
                 li.id = conversacion.id;
 
+                let usuarios = conversacion.id.split(",");
+
+                let contacto;
+
+                if (usuarios[0] != usuario) {
+                    contacto = usuarios[0];
+                } else {
+                    contacto = usuarios[1];
+                }
+
                 // Obtener el último mensaje de cada conversación
                 if (conversacion.ultimoMensaje) {
-                    li.textContent = `(${conversacion.ultimoMensaje.fecha}) ${conversacion.ultimoMensaje.emisor}: ${conversacion.ultimoMensaje.texto}`;
+
+                    li.textContent = `(chat con ${contacto})(${conversacion.ultimoMensaje.fecha}) ${conversacion.ultimoMensaje.emisor}: ${conversacion.ultimoMensaje.texto}`;
                 } else {
-                    li.textContent = conversacion.ultimoMensaje.emisor;
+                    li.textContent = `chat con ${contacto}`;
                 }
                 
                 // Agregar un event listener al li
@@ -111,8 +139,7 @@ document.getElementById("btnIniciarConversacion").addEventListener("click", asyn
         // Esperamos la respuesta de la invocación para saber si existe la conversación
         var conversacion = await connection.invoke("ExisteConversacion", usuario, usuarioBuscado);
 
-        if (conversacion != null && conversacion != undefined) {
-            alert("Ya existe una conversación con ese usuario. Serás redirigido allí");
+        if (conversacion) {
             var url = urlTemplate.replace('__conversacion__', encodeURIComponent(conversacion.id)).replace('__usuario__', encodeURIComponent(usuario));
             // Redirigir
             window.location.href = url;
@@ -120,7 +147,7 @@ document.getElementById("btnIniciarConversacion").addEventListener("click", asyn
             // Si no existe, creamos la conversación
             var conversacionCreada = await connection.invoke("CrearConversacion", usuario, usuarioBuscado);
 
-            if (conversacionCreada != null && conversacionCreada != undefined) {
+            if (conversacionCreada) {
                 let idConversacion = conversacionCreada.id || conversacionCreada._id;
 
                 if (idConversacion) {

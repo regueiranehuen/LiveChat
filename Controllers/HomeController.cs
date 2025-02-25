@@ -5,24 +5,29 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.SignalR;
 
 namespace LiveChat.Controllers
 {
     public class HomeController : CustomController
     {
+
         private readonly ILogger<HomeController> _logger;
-        
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger, IHubContext<ConversacionHub> conversacionHubContext)
+            : base(conversacionHubContext) // Pasa la dependencia correctamente al padre
         {
             _logger = logger;
         }
 
+
+
         public IActionResult Index()
         {
-            /*if (LogueoHecho())
+            if (LogueoHecho())
             {
                 return RedirectToAction("Conversaciones"); // no tengo que iniciar sesión de nuevo si es que ya se guardó mi usuario en cookies
-            }*/
+            }
 
 
             return View();
@@ -76,7 +81,7 @@ namespace LiveChat.Controllers
         public IActionResult Chat(string conversacion)
         {
 
-            if (LogueoHecho())
+            if (LogueoHecho() && ConversacionExistenteYCorrespondiente(conversacion)) // Chequeo si existe el id de conversacion ya que puede ser que el cliente esté modificando el id en la url
             {
                 ViewBag.Usuario = User.Identity.Name;
                 TempData["idConversacion"] = conversacion;
@@ -97,5 +102,6 @@ namespace LiveChat.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
