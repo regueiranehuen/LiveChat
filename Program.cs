@@ -43,6 +43,9 @@ builder.Services.AddScoped<ConversacionRepository>();
 // Crea una única instancia de MongoDBConnection y la reutiliza en toda la aplicación
 builder.Services.AddSingleton<MongoDBConnection>(sp => new MongoDBConnection());
 
+builder.Services.AddHttpContextAccessor();
+
+
 /*La inyección de dependencias (Dependency Injection o DI) es un patrón de diseño que ayuda a gestionar las dependencias entre los diferentes componentes de una aplicación de una manera organizada, flexible
   y fácil de mantener. En lugar de que un componente cree directamente sus dependencias (objetos necesarios para funcionar), estas se proporcionan ("inyectan") desde el exterior.*/
 

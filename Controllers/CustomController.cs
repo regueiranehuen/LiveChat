@@ -1,23 +1,22 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using System.Security.Claims;
 
 namespace LiveChat.Controllers
 {
     public class CustomController : Controller
     {
 
-        private readonly IHubContext<ConversacionHub> _conversacionHubContext;
-
-        public CustomController(IHubContext<ConversacionHub> conversacionHubContext)
-        {
-            _conversacionHubContext = conversacionHubContext;
-        }
+        
 
 
         public IActionResult ControlarLogueo()
         {
             var usuario = User.Identity.Name;
+            
             if (string.IsNullOrEmpty(usuario))
             {
                 return RedirectToAction("Index");
@@ -58,6 +57,7 @@ namespace LiveChat.Controllers
             return cH.ExisteConversacion(usuarios[0], usuarios[1]) != null;
 
         }
+
 
 
         

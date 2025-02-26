@@ -10,7 +10,10 @@
         console.log("Usuario autenticado:", usuario);
     </script>
 
-    <h1>Bienvenido a Livechat, @User.Identity.Name!!</h1>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text">Bienvenido, @User.Identity.Name!</span>
+        <button id="btnLogout" class="btn btn-danger">Cerrar sesión</button>
+    </nav>
     <input type="text" id="txtUsuarioBuscado" placeholder="Usuario a enviar mensaje">
 	<button id="btnIniciarConversacion">Iniciar conversación</button>
     <div class="row p-1">
@@ -26,4 +29,5 @@
 <script src="/js/conversaciones.js"></script>
 <script>
     var urlTemplate = '@Html.Raw(Url.Action("Chat", "Home", new { conversacion = "__conversacion__"}))';
+    var urlLogin = '@Html.Raw(Url.Action("Index","Home"))';
 </script>

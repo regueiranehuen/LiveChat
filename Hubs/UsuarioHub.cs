@@ -16,6 +16,7 @@ namespace LiveChat
 
         private UsuarioRepository _usuarioRepository;
 
+
         public UsuarioHub(UsuarioRepository usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
@@ -69,6 +70,9 @@ namespace LiveChat
 
             return true; // Inicio de sesión exitoso
         }
+
+
+        
 
 
     }

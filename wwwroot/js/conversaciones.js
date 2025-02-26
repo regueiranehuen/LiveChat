@@ -167,6 +167,8 @@ document.getElementById("btnIniciarConversacion").addEventListener("click", asyn
     }
 });
 
-
+document.getElementById("btnLogout").addEventListener("click", function () {
+    window.location.href = urlLogin;
+});
 
 

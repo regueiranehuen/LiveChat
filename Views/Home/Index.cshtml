@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/inicioSesion.js" defer></script>
     <title>Inicio de Sesión</title>
     <style>
@@ -86,5 +87,5 @@
 </body>
 
 <script>
-     var urlTemplate = '@Url.Action("Login", "Home", new { usuario = "__usuario__" })';
+    var urlTemplate = '@Url.Action("Conversaciones", "Home")';
 </script>

@@ -77,24 +77,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.getElementById("btnInicioSesion").addEventListener("click", async function () {
+
+
     var user = document.getElementsByName("username")[0].value;
     var password = document.getElementsByName("password")[0].value;
+
+
     try {
-        var usuarioRegistrado = await connection.invoke("IniciarSesion", user, password);
-        if (usuarioRegistrado) {
+        await axios.post("/Home/Login", {
+           user, password
+        });
 
-            // Reemplazar el placeholder con el valor real del usuario
-            var url = urlTemplate.replace('__usuario__', encodeURIComponent(user));
-
-            // Redirigir
-            window.location.href = url;
-        } else {
-            alert("El usuario no existe // La contraseña es incorrecta");
-        }
-    } catch (error) {
-        console.error('Error al iniciar sesión:', error);
-        alert("Hubo un error al iniciar sesión");
+        window.location.href = urlTemplate; 
+        
+        
+    } catch (e) {
+        alert("El usuario o la contraseña son incorrectos");
     }
+
 });
-
-
