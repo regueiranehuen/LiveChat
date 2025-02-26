@@ -95,7 +95,7 @@ namespace LiveChat
                                                         c.Id.Contains("," + username)).ToListAsync();
         }
 
-        public async Task<Conversacion> ObtenerConversacionPorId(string id)
+        public async Task<Conversacion?> ObtenerConversacionPorId(string id)
         {
             return await conversacionesCollection.Find(c => c.Id == id).FirstOrDefaultAsync();
         }

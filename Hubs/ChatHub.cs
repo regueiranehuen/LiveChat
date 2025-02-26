@@ -60,19 +60,23 @@ namespace LiveChat
         public async Task<Mensaje?> EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
         {
 
-            Mensaje mensaje = new Mensaje(idConversacion, emisor, destinatario, textoMensaje, DateTime.Now);
+            
 
             bool usuarioConectado = false;
 
             // Evitar que se pasen de vivos modificando código JS
             string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
 
-            if (_conversacionRepository.ExisteConversacion(emisor, destinatario) == null || !emisor.Equals(usuarioAutenticado)) 
+            if (_conversacionRepository.ExisteConversacion(emisor, destinatario) == null || 
+                !emisor.Equals(usuarioAutenticado) || 
+                _conversacionRepository.ObtenerConversacionPorId(idConversacion)==null ||
+                (!idConversacion.Equals(_conversacionRepository.CrearIdConversacion(emisor,destinatario)) &&
+                !idConversacion.Equals(_conversacionRepository.CrearIdConversacion(destinatario,emisor))))
             {
                 return null;
             }
 
-
+            Mensaje mensaje = new Mensaje(idConversacion, emisor, destinatario, textoMensaje, DateTime.Now);
 
             // Si el usuario está conectado al ChatHub
             if (Usuarios.TryGetValue(destinatario, out string connectionId))

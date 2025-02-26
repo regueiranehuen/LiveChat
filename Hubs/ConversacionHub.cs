@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Azure.Core.Serialization;
+using Microsoft.AspNetCore.SignalR;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
@@ -60,23 +61,29 @@ namespace LiveChat
 
         public async Task <Conversacion?> ExisteConversacion(string usuario1, string usuario2)
         {
-            
+            string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
+                                                                    
+            if (!usuario1.Equals(usuarioAutenticado) && !usuario2.Equals(usuarioAutenticado))
+            {
+                return null;
+            }                                                           
+
             return await _conversacionRepository.ExisteConversacion(usuario1, usuario2); // Si existe la conversacion simplemente la abrimos
         }
 
         public async Task<Conversacion?> CrearConversacion(string usuario1, string usuario2) // La conversacion puede crearse o no dependiendo de si el usuario buscado existe o no
         {
             string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
-            
+            //"jose-fran"
+            //"fran-jose"
 
             UsuarioRepository usuarioRepository = new UsuarioRepository(new MongoDBConnection()); // Cambiarlo por inyección
 
-            if (await usuarioRepository.ObtenerUsuarioPorUsername(usuario2) == null || !usuario1.Equals(usuarioAutenticado) || usuario2.Equals(usuarioAutenticado)) // Evitar que se pasen de vivos modificando codigo JS
+            if (await usuarioRepository.ObtenerUsuarioPorUsername(usuario2) == null || !usuario1.Equals(usuarioAutenticado) || usuario2.Equals(usuarioAutenticado) || ExisteConversacion(usuario1,usuario2) == null) // Evitar que se pasen de vivos modificando codigo JS
             {
                 return null; // El usuario buscado no existe y no se puede crear la conversacion
             }
 
-            System.Diagnostics.Debug.WriteLine("JIJOLINES");
             return await _conversacionRepository.CrearConversacion(usuario1, usuario2); // El usuario buscado existe y se puede crear la conversacion
 
         }
