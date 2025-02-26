@@ -1,5 +1,5 @@
-# LiveChat hecho con ASP.NET y MongoDB (EN PROCESO)  
+# LiveChat hecho con ASP.NET y MongoDB 
 ## por Nehuen Regueira
 
-- Biblioteca SignalR para utilizacion de funcionalidades en tiempo real
+- Biblioteca SignalR para funcionalidades en tiempo real
 - MongoDB para almacenar usuarios, mensajes y conversaciones
