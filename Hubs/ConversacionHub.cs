@@ -74,8 +74,6 @@ namespace LiveChat
         public async Task<Conversacion?> CrearConversacion(string usuario1, string usuario2) // La conversacion puede crearse o no dependiendo de si el usuario buscado existe o no
         {
             string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
-            //"jose-fran"
-            //"fran-jose"
 
             UsuarioRepository usuarioRepository = new UsuarioRepository(new MongoDBConnection()); // Cambiarlo por inyección
 

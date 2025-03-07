@@ -90,9 +90,10 @@ namespace LiveChat
 
         public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)
         {
-
-            return await conversacionesCollection.Find(c => c.Id.Contains(username + ",") ||
-                                                        c.Id.Contains("," + username)).ToListAsync();
+            return await conversacionesCollection.Find(c => (c.Id.Contains(username + ",") ||
+                                                        c.Id.Contains("," + username)) && 
+                                                        c.UltimoMensaje!=null). // Al usuario actual no le carga una conversacion que haya creado otra persona si es que nunca mandó un mensaje
+                                                        SortByDescending(c=>c.UltimoMensaje.Fecha).ToListAsync(); // Conversaciones ordenadas por fecha. 
         }
 
         public async Task<Conversacion?> ObtenerConversacionPorId(string id)

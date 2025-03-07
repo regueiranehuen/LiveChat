@@ -48,17 +48,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ilE2v7SUiQusLD\u002BpJfENKd3lRsJLUNTH9/XRCXxVzhw="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3717"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ilE2v7SUiQusLD\u002BpJfENKd3lRsJLUNTH9/XRCXxVzhw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Feb 2025 05:34:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/LiveChat/js/conversaciones.inpq4vgar9.js">
+    <StaticWebAssetEndpoint Include="_content/LiveChat/js/conversaciones.genm0efotg.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\conversaciones.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"inpq4vgar9"},{"Name":"integrity","Value":"sha256-ohseYdboW6\u002BtcoEoJI\u002BsJS47mNA830ecmK8tIpowjGE="},{"Name":"label","Value":"_content/LiveChat/js/conversaciones.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6676"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ohseYdboW6\u002BtcoEoJI\u002BsJS47mNA830ecmK8tIpowjGE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Feb 2025 13:07:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"genm0efotg"},{"Name":"integrity","Value":"sha256-\u002BAcapz3dZ3Jro4FZW15lvX5fTuYNLDu\u002BzJBotKec8FI="},{"Name":"label","Value":"_content/LiveChat/js/conversaciones.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6569"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022\u002BAcapz3dZ3Jro4FZW15lvX5fTuYNLDu\u002BzJBotKec8FI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Mar 2025 01:09:47 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/conversaciones.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\conversaciones.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ohseYdboW6\u002BtcoEoJI\u002BsJS47mNA830ecmK8tIpowjGE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6676"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ohseYdboW6\u002BtcoEoJI\u002BsJS47mNA830ecmK8tIpowjGE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 26 Feb 2025 13:07:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-\u002BAcapz3dZ3Jro4FZW15lvX5fTuYNLDu\u002BzJBotKec8FI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6569"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022\u002BAcapz3dZ3Jro4FZW15lvX5fTuYNLDu\u002BzJBotKec8FI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Mar 2025 01:09:47 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/LiveChat/js/inicioSesion.9d3xe6xiql.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\inicioSesion.js'))</AssetFile>

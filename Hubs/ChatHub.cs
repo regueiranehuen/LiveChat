@@ -67,7 +67,8 @@ namespace LiveChat
             // Evitar que se pasen de vivos modificando código JS
             string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
 
-            if (_conversacionRepository.ExisteConversacion(emisor, destinatario) == null || 
+            if (textoMensaje.Equals("") || // No se pueden enviar mensajes vacíos
+                _conversacionRepository.ExisteConversacion(emisor, destinatario) == null || 
                 !emisor.Equals(usuarioAutenticado) || 
                 _conversacionRepository.ObtenerConversacionPorId(idConversacion)==null ||
                 (!idConversacion.Equals(_conversacionRepository.CrearIdConversacion(emisor,destinatario)) &&

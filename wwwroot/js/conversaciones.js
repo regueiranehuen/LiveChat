@@ -9,48 +9,43 @@ connection.on("connected", function () {
     console.log("Conexión establecida con éxito.");
 });
 
-connection.on("RecibirMensaje", function (mensaje) { // Al recibir el evento SendMessage, el cliente va a recibir el mensaje y agregarlo a la lista de mensajes
+connection.on("RecibirMensaje", function (mensaje) {
     let listaMensajes = document.getElementById("listaMensajes");
-    
-
 
     let conversacionExistente = document.getElementById(mensaje.idConversacion);
+
     if (conversacionExistente) {
         console.log("Actualizando conversacion existente con ID:", mensaje.idConversacion);
-        conversacionExistente.textContent = `(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
+        conversacionExistente.textContent = `(chat con ${mensaje.emisor})(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
+
+        // Mover el elemento al inicio de la lista
+        listaMensajes.prepend(conversacionExistente);
+
     } else {
         console.log("Creando nueva conversacion con ID:", mensaje.idConversacion);
 
-        var li = document.createElement("li");
+        let li = document.createElement("li");
         li.id = mensaje.idConversacion; // Asignar ID
 
         let usuarios = mensaje.idConversacion.split(",");
-
-        let contacto;
-
-        if (usuarios[0] != usuario) {
-            contacto = usuarios[0];
-        } else {
-            contacto = usuarios[1];
-        }
+        let contacto = (usuarios[0] !== usuario) ? usuarios[0] : usuarios[1];
 
         li.textContent = `(chat con ${contacto})(${mensaje.fecha}) ${mensaje.emisor}: ${mensaje.texto}`;
 
-        console.log("Elemento creado:", li); // Verificar si tiene ID
         // Agregar un event listener al li
         li.addEventListener("click", function () {
-
-            // Reemplazar el placeholder con el valor real del usuario
-            var url = urlTemplate.replace('__conversacion__', encodeURIComponent(conversacion.id)).replace('__usuario__', encodeURIComponent(usuario));
-            // Redirigir
+            var url = urlTemplate.replace('__conversacion__', encodeURIComponent(mensaje.idConversacion))
+                .replace('__usuario__', encodeURIComponent(usuario));
             window.location.href = url;
-
         });
-        listaMensajes.appendChild(li);
+
+        console.log("Elemento creado:", li);
+
+        // Insertar el nuevo elemento al inicio de la lista
+        listaMensajes.prepend(li);
     }
-
-
 });
+
 
 // Evento cuando la conexión se cierra
 connection.onclose(function (error) {
