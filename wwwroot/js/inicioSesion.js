@@ -81,18 +81,31 @@ document.getElementById("btnInicioSesion").addEventListener("click", async funct
 
     var user = document.getElementsByName("username")[0].value;
     var password = document.getElementsByName("password")[0].value;
-
-
+    var token = grecaptcha.getResponse();
+    var conId = connection.connectionId;
     try {
         await axios.post("/Home/Login", {
-           user, password
+            user, password, token, conId
         });
 
         window.location.href = urlTemplate; 
         
         
     } catch (e) {
-        alert("El usuario o la contraseña son incorrectos");
+
+        if (e.response.data === "Aparecer captcha") {
+            document.getElementsByClassName('g-recaptcha')[0].style.display = 'block';
+            alert("El usuario y/o la contraseña son incorrectas")
+        }
+        else {
+            alert(e.response.data); // Caso en el que no se completa el captcha
+
+            if (document.getElementsByClassName('g-recaptcha')[0].style.display === 'block') {
+                grecaptcha.reset();
+            }
+
+        }
+        
     }
 
 });

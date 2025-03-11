@@ -24,9 +24,6 @@ namespace LiveChat
             string usuario = Context.User.Identity.Name; // Obtener usuario autenticado
             string connectionId = Context.ConnectionId; // Obtener ID de conexión
 
-            System.Diagnostics.Debug.WriteLine("usuario sigma:" + usuario);
-            System.Diagnostics.Debug.WriteLine("connection id sigma:" + connectionId);
-
             if (!string.IsNullOrEmpty(usuario))
             {
                 Usuarios[usuario] = connectionId;

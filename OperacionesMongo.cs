@@ -2,13 +2,15 @@
 
 namespace LiveChat
 {
-    public class MongoDBConnection
+
+    
+    public class MongoDBConnection : IDisposable // Implemento la interfaz IDisposable
     {
         private readonly IMongoDatabase database;
-
+        private MongoClient? client;
         public MongoDBConnection()
         {
-            var client = new MongoClient(Environment.GetEnvironmentVariable("ConnStringLiveChat"));
+            client = new MongoClient(Environment.GetEnvironmentVariable("ConnStringLiveChat"));
             database = client.GetDatabase("MENSAJERIA_DB");
         }
 
@@ -27,7 +29,11 @@ namespace LiveChat
             return database.GetCollection<Mensaje>("Mensajes");
         }
 
-        
+        // Con esto puedo hacer conexiones temporales manualmente usando using
+        public void Dispose()
+        {
+            client = null;
+        }
 
     }
 

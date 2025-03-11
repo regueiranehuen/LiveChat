@@ -65,15 +65,22 @@ namespace LiveChat.Controllers
         {
             Debug.WriteLine("USERNAME JUJU: " + request.User);
 
+
+            // Por contrato, cualquier tipo que se use dentro de un bloque using debe implementar la interfaz IDisposable.
+
+            // Interfaz
+            /*En C#, una interfaz (interface) es un contrato que define un conjunto de métodos, propiedades, eventos o indexadores que una clase debe implementar. Sin embargo, no contiene implementación, solo la definición de los métodos.
+*/
+
             MongoDBConnection m = new MongoDBConnection();
             UsuarioRepository u = new UsuarioRepository(m);
             UsuarioHub uH = new UsuarioHub(u);
 
-            
+            string inicioSesion = await uH.IniciarSesion(request.User, request.Password, request.Token, request.ConId);
 
-            if (await uH.IniciarSesion(request.User, request.Password))
+            if (inicioSesion.Equals("Inicio de sesión exitoso"))
             {
-                var claims = new List<Claim>{new Claim(ClaimTypes.Name, request.User)}; // Claim: dato que representa al usuario autenticado
+                var claims = new List<Claim> { new Claim(ClaimTypes.Name, request.User) }; // Claim: dato que representa al usuario autenticado
 
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme); // Identidad del usuario con sus claims
                 var principal = new ClaimsPrincipal(identity); // Representa al usuario autenticado
@@ -82,8 +89,16 @@ namespace LiveChat.Controllers
                                                                                                              // Devuelve un status 200 OK con el valor true
                 return Ok(true); // axios.post devuelve objeto de respuesta. Devuelve un status 200 OK con el valor true
             }
-            // Si la autenticación falla, devuelve un status 401 Unauthorized
-            return Unauthorized(false);
+            else if (inicioSesion.Equals("El usuario no existe") || inicioSesion.Equals("La contraseña es incorrecta"))
+            {
+                return Unauthorized("El usuario no existe / la contraseña es incorrecta");
+            }
+            else if (inicioSesion.Equals("Verificar captcha"))
+            {
+                return Unauthorized("Verificar captcha");
+            }
+
+            return Unauthorized(inicioSesion); // Crear captcha
 
         }
 
@@ -114,7 +129,6 @@ namespace LiveChat.Controllers
 
         public IActionResult Chat(string conversacion)
         {
-
             if (LogueoHecho() && ConversacionExistenteYCorrespondiente(conversacion)) // Chequeo si existe el id de conversacion ya que puede ser que el cliente esté modificando el id en la url
             {
                 ViewBag.Usuario = User.Identity.Name;

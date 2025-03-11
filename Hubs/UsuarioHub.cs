@@ -4,6 +4,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Collections.Concurrent;
+using System.Runtime.InteropServices.JavaScript;
+using Newtonsoft.Json.Linq;
+using MongoDB.Driver.Core.Connections;
 
 
 
@@ -16,22 +19,50 @@ namespace LiveChat
 
         private UsuarioRepository _usuarioRepository;
 
-
         public UsuarioHub(UsuarioRepository usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
         }
 
-        
 
-        public async Task<bool> RegistrarUsuario(string username, string password)
+        // Para guardar intentos de login de cada connectionId
+        private static ConcurrentDictionary<string, int> Usuarios = new ConcurrentDictionary<string, int>();
+
+
+        public override async Task OnConnectedAsync()
+        {
+            string connectionId = Context.ConnectionId;
+            Usuarios[connectionId] = 0;
+            await base.OnConnectedAsync();
+        }
+
+        public override async Task OnDisconnectedAsync(Exception? exception)
+        {
+            Usuarios.TryRemove(Context.ConnectionId, out _);
+            await base.OnDisconnectedAsync(exception);
+        }
+
+
+        public async Task<string> RegistrarUsuario(string username, string password, string token)
         {
             var funcionesRegex = new FuncionesRegex();
             
             var usuarioExistente = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
-            if (usuarioExistente != null || !funcionesRegex.PasswordValida(password) || !funcionesRegex.UserValido(username))
+
+            bool captchaValido = await VerificarCaptcha(token);
+
+            if (usuarioExistente != null)
             {
-                return false; // El usuario ya existe // la contraseña no es valida // el nombre de usuario no es valido
+                return "El usuario ya existe";
+            }
+            else if (!funcionesRegex.UserValido(username) || !funcionesRegex.PasswordValida(password))
+            {
+                return "El nombre de usuario y/o la contraseña no son válidos";
+            }
+            
+            else if (!captchaValido)
+            {
+                return "Complete el captcha";
             }
             var funcionesPasswords = new FuncionesPasswords();
 
@@ -41,34 +72,78 @@ namespace LiveChat
 
             var nuevoUsuario = new Usuario(username, passwordHasheada, salt);
             await _usuarioRepository.CrearUsuario(nuevoUsuario);
-            return true; // Usuario registrado correctamente
+            return "Usuario registrado con éxito"; 
         }
 
 
-
-        public async Task<bool> IniciarSesion(string username, string password)
+        private async Task<bool>VerificarCaptcha(string token)
         {
+            string? claveSecreta = Environment.GetEnvironmentVariable("SecretKeyRecaptchaLiveChat");
+
+
+            string url = $"https://www.google.com/recaptcha/api/siteverify?secret={claveSecreta}&response={token}";
             
-           
+            using (HttpClient cliente = new HttpClient())
+            {
+                string rta = await cliente.GetStringAsync(url);
+                JObject json = JObject.Parse(rta);
+
+                return (bool)json["success"];
+            }
+        }
+
+
+        public async Task<string> IniciarSesion(string username, string password, string token, string connectionId)
+        {
+
+            if (Usuarios[connectionId] > 3 && await VerificarCaptcha(token)==false)
+            {
+               
+                return "Verificar captcha"; // Verificar captcha
+            }
+
             var usuario = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
 
             
 
             if (usuario == null)
             {
-                return false; // Usuario no existe o contraseña incorrecta
+                Usuarios[connectionId]+=1;
+
+                System.Diagnostics.Debug.WriteLine("Intentos del usuario " + connectionId + ":" + Usuarios[connectionId]);
+
+                if (Usuarios[connectionId] == 3) // Luego de 3 intentos del usuario para loguearse, le arrojo el captcha
+                {
+                    return "Aparecer captcha";
+                }
+
+                return "El usuario no existe"; // Usuario no existe
             }
             var funcionesPasswords = new FuncionesPasswords();
             string passwordEscritaHasheada = funcionesPasswords.HashearPassword(password, usuario.Salt);
 
             if (usuario.PasswordHash != passwordEscritaHasheada)
             {
-                return false; // Contraseña incorrecta
+                Usuarios[connectionId] += 1;
+
+                System.Diagnostics.Debug.WriteLine("Intentos del usuario " + connectionId + ":" + Usuarios[connectionId]);
+                    
+                if (Usuarios[connectionId] == 3) // Luego de 3 intentos del usuario para loguearse, le arrojo el captcha
+                {
+                    return "Aparecer captcha";
+                }
+                return "La contraseña es incorrecta"; // Contraseña incorrecta
             }
 
 
-
-            return true; // Inicio de sesión exitoso
+            if (Usuarios[connectionId] > 3)
+            {
+                if (await VerificarCaptcha(token))
+                {
+                    return "Inicio de sesión exitoso"; // Inicio de sesión exitoso
+                }
+            }
+            return "Inicio de sesión exitoso"; // Inicio de sesión exitoso
         }
 
 
@@ -112,7 +187,7 @@ namespace LiveChat
 
         public bool UserValido(string username)
         {
-            string regex = @"^[a-zA-Z0-9_-]{4,}$"; // Al menos 4 caracteres, letras del abecedario, números y guiones permitidos
+            string regex = @"^[a-zA-Z0-9_-]{4,}$"; // Al menos 4 caracteres, letras del abecedario (sin la ñ), números y guiones permitidos
             if (Regex.IsMatch(username, regex))
             {
                 return true;

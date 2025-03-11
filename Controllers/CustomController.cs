@@ -36,10 +36,12 @@ namespace LiveChat.Controllers
             return true;
         }
 
-        public bool ConversacionExistenteYCorrespondiente(string idConversacion) 
+        public bool ConversacionExistenteYCorrespondiente(string idConversacion)
         {
             string[] usuarios = idConversacion.Split(',');
             // Evitar viveza con JS
+
+
             MongoDBConnection m = new MongoDBConnection();
             ConversacionRepository c = new ConversacionRepository(m);
             ConversacionHub cH = new ConversacionHub(c);
@@ -51,15 +53,15 @@ namespace LiveChat.Controllers
                 return false; // si bien puede existir la conversacion, no es incumbencia del usuario que me mandó javascript si es así
             }
 
-
-
-
             return cH.ExisteConversacion(usuarios[0], usuarios[1]) != null;
+
+
+
 
         }
 
 
 
-        
+
     }
 }

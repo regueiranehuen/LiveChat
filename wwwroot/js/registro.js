@@ -83,14 +83,15 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("btnRegistro").addEventListener("click", async function () {
     var user = document.getElementsByName("username")[0].value;
     var password = document.getElementsByName("password")[0].value;
+    var token = grecaptcha.getResponse();
     try {
-        var usuarioRegistrado = await connection.invoke("RegistrarUsuario", user, password);
-        if (usuarioRegistrado) {
-            alert("Usuario registrado con éxito");
+        var usuarioRegistrado = await connection.invoke("RegistrarUsuario", user, password, token);
+        alert(usuarioRegistrado);
+        if (usuarioRegistrado === "Usuario registrado con éxito") {
             window.location.href = "/Home/Index";
-
-        } else {
-            alert("El usuario ya existe // la contraseña no es valida // el nombre de usuario no es valido");
+        }
+        else {
+            grecaptcha.reset();
         }
     } catch (error) {
         console.error('Error al registrar usuario:', error);

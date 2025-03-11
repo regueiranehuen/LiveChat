@@ -1,13 +1,10 @@
 using System.Net;
 using LiveChat;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.Win32;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Agrega esta línea para habilitar que el servidor escuche en todas las interfaces de red.
-//builder.WebHost.UseUrls("https://localhost:7259");
 
 builder.WebHost.ConfigureKestrel(options =>
 {
@@ -30,7 +27,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddRazorPages(); // Para Razor Pages (si estás usando @page)
+builder.Services.AddRazorPages(); // Para Razor Pages
 
 builder.Services.AddSignalR(); // Esta aplicación usa SignalR
 
@@ -41,7 +38,7 @@ builder.Services.AddScoped<ConversacionRepository>();
 
 
 // Crea una única instancia de MongoDBConnection y la reutiliza en toda la aplicación
-builder.Services.AddSingleton<MongoDBConnection>(sp => new MongoDBConnection());
+builder.Services.AddSingleton<MongoDBConnection>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -85,21 +82,16 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 
-//app.UseEndpoints(endpoints => {endpoints.MapHub<ChatHub>("/chat")});
 
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapRazorPages(); // Solo si estás usando Razor Pages
+app.MapRazorPages(); // Uso razor pages
 
 app.MapHub<UsuarioHub>("/usuariohub");
 app.MapHub<ConversacionHub>("/conversacionhub");
 app.MapHub<ChatHub>("/chathub");
-
-
-
-
 
 app.Run();

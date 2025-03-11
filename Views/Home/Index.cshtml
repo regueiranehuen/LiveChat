@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/microsoft/signalr/dist/browser/signalr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="/js/inicioSesion.js" defer></script>
     <title>Inicio de Sesión</title>
     <style>
@@ -79,6 +80,7 @@
             <input type="password" name="password" placeholder="Contraseña" required>
         <input type="checkbox" id="checkboxMostrarContraseña" value="1">
         Mostrar contraseña
+        <div class="g-recaptcha" data-sitekey="6LcVk_AqAAAAANcJuhhF1C2mZg7GqZpgG6waFZyf" style="display:none"></div>
             <button id = "btnInicioSesion" type="submit">Ingresar</button>
         
         
