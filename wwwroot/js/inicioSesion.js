@@ -95,7 +95,7 @@ document.getElementById("btnInicioSesion").addEventListener("click", async funct
 
         if (e.response.data === "Aparecer captcha") {
             document.getElementsByClassName('g-recaptcha')[0].style.display = 'block';
-            alert("El usuario y/o la contraseña son incorrectas")
+            alert("El usuario no existe / la contraseña es incorrecta")
         }
         else {
             alert(e.response.data); // Caso en el que no se completa el captcha

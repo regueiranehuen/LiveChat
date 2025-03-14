@@ -95,6 +95,10 @@ namespace LiveChat
 
         public async Task<string> IniciarSesion(string username, string password, string token, string connectionId)
         {
+            if (!Usuarios.ContainsKey(connectionId))
+            {
+                return "Connection id inválido";
+            }
 
             if (Usuarios[connectionId] > 3 && await VerificarCaptcha(token)==false)
             {

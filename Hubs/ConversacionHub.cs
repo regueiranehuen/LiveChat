@@ -72,14 +72,19 @@ namespace LiveChat
         {
             string usuarioAutenticado = Context.User.Identity.Name; // Obtener usuario autenticado
 
-            UsuarioRepository usuarioRepository = new UsuarioRepository(new MongoDBConnection()); // Cambiarlo por inyección
-
-            if (await usuarioRepository.ObtenerUsuarioPorUsername(usuario2) == null || !usuario1.Equals(usuarioAutenticado) || usuario2.Equals(usuarioAutenticado) || ExisteConversacion(usuario1,usuario2) == null) // Evitar que se pasen de vivos modificando codigo JS
+            using (MongoDBConnection m = new MongoDBConnection())
             {
-                return null; // El usuario buscado no existe y no se puede crear la conversacion
-            }
+                UsuarioRepository usuarioRepository = new UsuarioRepository(m); 
 
-            return await _conversacionRepository.CrearConversacion(usuario1, usuario2); // El usuario buscado existe y se puede crear la conversacion
+                if (await usuarioRepository.ObtenerUsuarioPorUsername(usuario2) == null || !usuario1.Equals(usuarioAutenticado) || usuario2.Equals(usuarioAutenticado) || ExisteConversacion(usuario1, usuario2) == null) // Evitar que se pasen de vivos modificando codigo JS
+                {
+                    return null; // El usuario buscado no existe y no se puede crear la conversacion
+                }
+
+                return await _conversacionRepository.CrearConversacion(usuario1, usuario2); // El usuario buscado existe y se puede crear la conversacion
+            }
+            
+            
 
         }
 

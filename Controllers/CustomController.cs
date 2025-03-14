@@ -41,19 +41,22 @@ namespace LiveChat.Controllers
             string[] usuarios = idConversacion.Split(',');
             // Evitar viveza con JS
 
-
-            MongoDBConnection m = new MongoDBConnection();
-            ConversacionRepository c = new ConversacionRepository(m);
-            ConversacionHub cH = new ConversacionHub(c);
-
-            string usuarioAutenticado = User.Identity.Name;
-
-            if (!usuarioAutenticado.Equals(usuarios[0]) && !usuarioAutenticado.Equals(usuarios[1]))
+            using (MongoDBConnection m = new MongoDBConnection())
             {
-                return false; // si bien puede existir la conversacion, no es incumbencia del usuario que me mandó javascript si es así
+                ConversacionRepository c = new ConversacionRepository(m);
+                ConversacionHub cH = new ConversacionHub(c);
+
+                string usuarioAutenticado = User.Identity.Name;
+
+                if (!usuarioAutenticado.Equals(usuarios[0]) && !usuarioAutenticado.Equals(usuarios[1]))
+                {
+                    return false; // si bien puede existir la conversacion, no es incumbencia del usuario que me mandó javascript si es así
+                }
+
+                return cH.ExisteConversacion(usuarios[0], usuarios[1]) != null;
+
             }
 
-            return cH.ExisteConversacion(usuarios[0], usuarios[1]) != null;
 
 
 

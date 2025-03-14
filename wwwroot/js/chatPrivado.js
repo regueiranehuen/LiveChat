@@ -82,14 +82,27 @@ connection.start().then(function () {
     console.error("Error al conectar con el Hub:", err.toString());
 });
 
-document.getElementById("btnEnviarMensaje").addEventListener("click", async function () {
+
+
+
+document.getElementById("btnEnviarMensaje").addEventListener("click", enviarMensaje);
+
+document.getElementById("inputMensaje").addEventListener('keydown', async function (evento) {
+    if (evento.key === 'Enter') {
+        await enviarMensaje();
+    }
+});
+
+
+async function enviarMensaje() {
+
     var textoMensaje = document.getElementById("inputMensaje").value;
     console.log(idConversacion);
     console.log(textoMensaje);
     try {
         let listaMensajes = document.getElementById("listaMensajes");
         let mensaje = await connection.invoke("EnviarMensaje", idConversacion, textoMensaje, usuarioRegistrado, usuario2);
-        
+
         let li = document.createElement("li");
         li.id = idConversacion;
 
@@ -104,5 +117,6 @@ document.getElementById("btnEnviarMensaje").addEventListener("click", async func
         console.error('Error al enviar mensaje:', error);
         alert("Hubo un error al enviar mensaje");
     }
-});
+}
+
 

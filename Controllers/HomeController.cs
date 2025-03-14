@@ -71,34 +71,37 @@ namespace LiveChat.Controllers
             // Interfaz
             /*En C#, una interfaz (interface) es un contrato que define un conjunto de métodos, propiedades, eventos o indexadores que una clase debe implementar. Sin embargo, no contiene implementación, solo la definición de los métodos.
 */
-
-            MongoDBConnection m = new MongoDBConnection();
-            UsuarioRepository u = new UsuarioRepository(m);
-            UsuarioHub uH = new UsuarioHub(u);
-
-            string inicioSesion = await uH.IniciarSesion(request.User, request.Password, request.Token, request.ConId);
-
-            if (inicioSesion.Equals("Inicio de sesión exitoso"))
+            using (MongoDBConnection m = new MongoDBConnection())
             {
-                var claims = new List<Claim> { new Claim(ClaimTypes.Name, request.User) }; // Claim: dato que representa al usuario autenticado
+                UsuarioRepository u = new UsuarioRepository(m);
+                UsuarioHub uH = new UsuarioHub(u);
 
-                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme); // Identidad del usuario con sus claims
-                var principal = new ClaimsPrincipal(identity); // Representa al usuario autenticado
+                string inicioSesion = await uH.IniciarSesion(request.User, request.Password, request.Token, request.ConId);
 
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal); // Guarda la sesión en una cookie para que el usuario no tenga que iniciar sesión en cada request
-                                                                                                             // Devuelve un status 200 OK con el valor true
-                return Ok(true); // axios.post devuelve objeto de respuesta. Devuelve un status 200 OK con el valor true
-            }
-            else if (inicioSesion.Equals("El usuario no existe") || inicioSesion.Equals("La contraseña es incorrecta"))
-            {
-                return Unauthorized("El usuario no existe / la contraseña es incorrecta");
-            }
-            else if (inicioSesion.Equals("Verificar captcha"))
-            {
-                return Unauthorized("Verificar captcha");
-            }
+                if (inicioSesion.Equals("Inicio de sesión exitoso"))
+                {
+                    var claims = new List<Claim> { new Claim(ClaimTypes.Name, request.User) }; // Claim: dato que representa al usuario autenticado
 
-            return Unauthorized(inicioSesion); // Crear captcha
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme); // Identidad del usuario con sus claims
+                    var principal = new ClaimsPrincipal(identity); // Representa al usuario autenticado
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal); // Guarda la sesión en una cookie para que el usuario no tenga que iniciar sesión en cada request
+                                                                                                                
+                    return Ok(true); // axios.post devuelve objeto de respuesta. Devuelve un status 200 OK con el valor true
+                }
+                else if (inicioSesion.Equals("El usuario no existe") || inicioSesion.Equals("La contraseña es incorrecta"))
+                {
+                    return Unauthorized("El usuario no existe / la contraseña es incorrecta");
+                }
+                else if (inicioSesion.Equals("Verificar captcha"))
+                {
+                    return Unauthorized("Verificar captcha");
+                }
+
+                return Unauthorized(inicioSesion); // Crear captcha
+            }
+            
+           
 
         }
 
