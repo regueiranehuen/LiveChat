@@ -96,15 +96,24 @@ namespace LiveChat
 
         public async Task<List<Conversacion>> ObtenerConversacionesPorUsuario(string username)
         {
-            return await conversacionesCollection.Find(c => (c.Id.Contains(username + ",") ||
-                                                        c.Id.Contains("," + username)) && 
-                                                        c.UltimoMensaje!=null). // Al usuario actual no le carga una conversacion que haya creado otra persona si es que nunca mandó un mensaje
-                                                        SortByDescending(c=>c.UltimoMensaje.Fecha).ToListAsync(); // Conversaciones ordenadas por fecha. 
+            List<Conversacion> conversaciones = await conversacionesCollection.Find(c => (c.Id.Contains(username + ",") ||
+                                                        c.Id.Contains("," + username)) &&
+                                                        c.UltimoMensaje != null). // Al usuario actual no le carga una conversacion que haya creado otra persona si es que nunca mandó un mensaje
+                                                        SortByDescending(c => c.UltimoMensaje.Fecha).ToListAsync(); // Conversaciones ordenadas por fecha. 
+            if (conversaciones.Count > 0)
+                conversaciones.ForEach(conversacion => conversacion.UltimoMensaje.Fecha = conversacion.UltimoMensaje.Fecha.ToLocalTime());
+
+            return conversaciones; 
         }
 
         public async Task<Conversacion?> ObtenerConversacionPorId(string id)
         {
-            return await conversacionesCollection.Find(c => c.Id == id).FirstOrDefaultAsync();
+            Conversacion? conversacion = await conversacionesCollection.Find(c => c.Id == id).FirstOrDefaultAsync();
+
+            if (conversacion.UltimoMensaje!=null)
+                conversacion.UltimoMensaje.Fecha = conversacion.UltimoMensaje.Fecha.ToLocalTime();
+
+            return conversacion;
         }
         public async Task AgregarMensajeAConversacion(string idConversacion, Mensaje mensaje)
         {
@@ -120,7 +129,11 @@ namespace LiveChat
 
         public async Task<List<Mensaje>> GetMensajesDeConversacion(string idConversacion)
         {
-            return await this.mensajesCollection.Find(m => m.IdConversacion == idConversacion).ToListAsync();
+            List<Mensaje> mensajes = await this.mensajesCollection.Find(m => m.IdConversacion == idConversacion).ToListAsync();
+
+            mensajes.ForEach(mensaje => mensaje.Fecha = mensaje.Fecha.ToLocalTime());
+
+            return mensajes;
         }
 
 

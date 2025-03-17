@@ -22,8 +22,9 @@ namespace LiveChat
         public string Texto { get; set; }
 
         [BsonElement("fecha")]
-        [BsonRepresentation(BsonType.DateTime)] // Para que se guarde como DateTime en MongoDB
+        [BsonRepresentation(BsonType.DateTime)]
         public DateTime Fecha { get; set; }
+
 
         public Mensaje(string idConversacion, string emisor, string receptor, string texto, DateTime fecha)
         {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LiveChat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffeaa7f7d7f9b56948cd25b186d02b6fff557df4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09796918af782235d0a489295a784e92572beef4")]
 [assembly: System.Reflection.AssemblyProductAttribute("LiveChat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LiveChat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

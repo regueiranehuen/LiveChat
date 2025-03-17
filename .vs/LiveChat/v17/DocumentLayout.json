@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\hubs\\conversacionhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:hubs\\conversacionhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\wwwroot\\js\\chatprivado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:wwwroot\\js\\chatprivado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\operacionesmongo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:operacionesmongo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\models\\mensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:models\\mensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\models\\conversacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:models\\conversacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\hubs\\conversacionhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:hubs\\conversacionhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\controllers\\customcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +35,24 @@
       "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\wwwroot\\js\\chatprivado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:wwwroot\\js\\chatprivado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\wwwroot\\js\\conversaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:wwwroot\\js\\conversaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\hubs\\usuariohub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:hubs\\usuariohub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,18 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\wwwroot\\js\\registro.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:wwwroot\\js\\registro.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\hubs\\usuariohub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:hubs\\usuariohub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09065A0D-1A49-4F8A-A4FA-2D25295CC4DA}|LiveChat.csproj|c:\\users\\nehue\\escritorio\\programacion\\proyectos.net\\proyectosasp.net\\livechat\\views\\home\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,20 +82,85 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "OperacionesMongo.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\OperacionesMongo.cs",
+              "RelativeDocumentMoniker": "OperacionesMongo.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\OperacionesMongo.cs",
+              "RelativeToolTip": "OperacionesMongo.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAIMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T22:54:34.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "conversaciones.js",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\conversaciones.js",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\conversaciones.js",
+              "RelativeToolTip": "wwwroot\\js\\conversaciones.js",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-17T22:44:09.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mensaje.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Models\\Mensaje.cs",
+              "RelativeDocumentMoniker": "Models\\Mensaje.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Models\\Mensaje.cs",
+              "RelativeToolTip": "Models\\Mensaje.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T22:29:25.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Conversacion.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Models\\Conversacion.cs",
+              "RelativeDocumentMoniker": "Models\\Conversacion.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Models\\Conversacion.cs",
+              "RelativeToolTip": "Models\\Conversacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T22:29:18.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConversacionHub.cs",
+              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\ConversacionHub.cs",
+              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
+              "RelativeToolTip": "Hubs\\ConversacionHub.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwDIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T22:27:47.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "chatPrivado.js",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\chatPrivado.js",
               "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\chatPrivado.js",
               "RelativeToolTip": "wwwroot\\js\\chatPrivado.js",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAHYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-03-14T01:50:10.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CustomController.cs",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Controllers\\CustomController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomController.cs",
@@ -96,45 +173,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Chat.cshtml",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Views\\Home\\Chat.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Chat.cshtml",
               "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Views\\Home\\Chat.cshtml",
               "RelativeToolTip": "Views\\Home\\Chat.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-14T01:35:50.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-11T16:35:39.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\ChatHub.cs",
               "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
               "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\ChatHub.cs",
               "RelativeToolTip": "Hubs\\ChatHub.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAowEYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T05:22:53.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "Models\\LoginRequest.cs",
@@ -147,28 +212,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwEwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAADwv0wAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T04:03:55.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "UsuarioHub.cs",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\UsuarioHub.cs",
               "RelativeDocumentMoniker": "Hubs\\UsuarioHub.cs",
               "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\UsuarioHub.cs",
               "RelativeToolTip": "Hubs\\UsuarioHub.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAUwG0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T03:42:22.76Z"
+              "WhenOpened": "2025-03-11T03:42:22.76Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -178,13 +244,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwBIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAUwBIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T04:55:51.458Z"
+              "WhenOpened": "2025-03-11T04:55:51.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "registro.js",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\registro.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\registro.js",
@@ -192,12 +259,11 @@
               "RelativeToolTip": "wwwroot\\js\\registro.js",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAwFwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-11T03:56:27.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T03:56:27.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "inicioSesion.js",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\wwwroot\\js\\inicioSesion.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\inicioSesion.js",
@@ -205,12 +271,11 @@
               "RelativeToolTip": "wwwroot\\js\\inicioSesion.js",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAFsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-11T03:54:52.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T03:54:52.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -218,12 +283,11 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-11T04:13:44.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T04:13:44.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Registro.cshtml",
               "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Views\\Home\\Registro.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Registro.cshtml",
@@ -232,25 +296,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-11T04:27:45.344Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 2162,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConversacionHub.cs",
-              "DocumentMoniker": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
-              "RelativeDocumentMoniker": "Hubs\\ConversacionHub.cs",
-              "ToolTip": "C:\\Users\\nehue\\Escritorio\\Programacion\\Proyectos.NET\\ProyectosASP.NET\\LiveChat\\Hubs\\ConversacionHub.cs",
-              "RelativeToolTip": "Hubs\\ConversacionHub.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T03:40:27.034Z",
-              "EditorCaption": ""
             }
           ]
         }
