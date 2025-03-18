@@ -103,7 +103,7 @@ namespace LiveChat
             if (Usuarios[connectionId] > 3 && await VerificarCaptcha(token)==false)
             {
                
-                return "Verificar captcha"; // Verificar captcha
+                return "Verificar captcha"; 
             }
 
             var usuario = await _usuarioRepository.ObtenerUsuarioPorUsername(username);
@@ -121,7 +121,7 @@ namespace LiveChat
                     return "Aparecer captcha";
                 }
 
-                return "El usuario no existe"; // Usuario no existe
+                return "El usuario no existe"; 
             }
             var funcionesPasswords = new FuncionesPasswords();
             string passwordEscritaHasheada = funcionesPasswords.HashearPassword(password, usuario.Salt);
@@ -136,7 +136,7 @@ namespace LiveChat
                 {
                     return "Aparecer captcha";
                 }
-                return "La contraseña es incorrecta"; // Contraseña incorrecta
+                return "La contraseña es incorrecta";
             }
 
 
@@ -144,10 +144,10 @@ namespace LiveChat
             {
                 if (await VerificarCaptcha(token))
                 {
-                    return "Inicio de sesión exitoso"; // Inicio de sesión exitoso
+                    return "Inicio de sesión exitoso"; 
                 }
             }
-            return "Inicio de sesión exitoso"; // Inicio de sesión exitoso
+            return "Inicio de sesión exitoso"; 
         }
 
 

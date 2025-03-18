@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.Extensions.Options;
+using Azure.Core;
 
 namespace LiveChat.Controllers
 {
@@ -24,12 +26,23 @@ namespace LiveChat.Controllers
 
         public IActionResult Index()
         {
-            /*if (LogueoHecho())
-            {
-                return RedirectToAction("Conversaciones"); // no tengo que iniciar sesión de nuevo si es que ya se guardó mi usuario en cookies
-            }*/
 
-            Logout();
+            if (Request.Cookies.TryGetValue("MantenerSesionIniciada", out string valor))
+            {
+                if (valor.Equals("true"))
+                {
+                    return RedirectToAction("Conversaciones");
+                }
+            }
+            else
+            {
+                Response.Cookies.Append("MantenerSesionIniciada", "false", new CookieOptions
+                {
+                    Expires = DateTime.Now.AddDays(7), // Expira en 7 días
+                    HttpOnly = true, // Solo accesible desde el servidor
+                });
+            }
+
             return View();
         }
 
@@ -85,9 +98,28 @@ namespace LiveChat.Controllers
                     var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme); // Identidad del usuario con sus claims
                     var principal = new ClaimsPrincipal(identity); // Representa al usuario autenticado
 
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal); // Guarda la sesión en una cookie para que el usuario no tenga que iniciar sesión en cada request
+                    if (request.MantenerSesionIniciada)
+                    {
+                        Response.Cookies.Append("MantenerSesionIniciada", "true", new CookieOptions
+                        {
+                            Expires = DateTime.Now.AddDays(7), // Expira en 7 días
+                            HttpOnly = true, // Solo accesible desde el servidor
+                        });
+                    }
+                    else
+                    {
+                        Response.Cookies.Append("MantenerSesionIniciada", "false", new CookieOptions
+                        {
+                            Expires = DateTime.Now.AddDays(7), // Expira en 7 días
+                            HttpOnly = true, // Solo accesible desde el servidor
+                        });
+                    }
+
+
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal); // Guarda la sesión en una cookie
                                                                                                                 
-                    return Ok(true); // axios.post devuelve objeto de respuesta. Devuelve un status 200 OK con el valor true
+                    return Ok(true); 
                 }
                 else if (inicioSesion.Equals("El usuario no existe") || inicioSesion.Equals("La contraseña es incorrecta"))
                 {
@@ -105,9 +137,17 @@ namespace LiveChat.Controllers
 
         }
 
-        public void Logout()
+        [HttpPost]
+        public async Task<IActionResult> Logout()
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            Response.Cookies.Append("MantenerSesionIniciada", "false", new CookieOptions
+            {
+                Expires = DateTime.Now.AddDays(7), // Expira en 7 días
+                HttpOnly = true, // Solo accesible desde el servidor
+            });
+
+            return Ok(true);
         }
 
 

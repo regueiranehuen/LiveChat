@@ -162,8 +162,13 @@ document.getElementById("btnIniciarConversacion").addEventListener("click", asyn
     }
 });
 
-document.getElementById("btnLogout").addEventListener("click", function () {
+document.getElementById("btnLogout").addEventListener("click", async function () {
+
+    await axios.post("/Home/Logout");
+
     window.location.href = urlLogin;
+
+
 });
 
 

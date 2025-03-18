@@ -57,9 +57,6 @@ namespace LiveChat
 
         public async Task<Mensaje?> EnviarMensaje(string idConversacion,string textoMensaje, string emisor, string destinatario)
         {
-
-            
-
             bool usuarioConectado = false;
 
             // Evitar que se pasen de vivos modificando código JS
@@ -90,25 +87,13 @@ namespace LiveChat
                 await _conversacionHubContext.Clients.Client(connectionId2).SendAsync("RecibirMensaje", mensaje);
             }
 
-            if (usuarioConectado)
-            {
-                usuarioConectado = false;
-                goto final;
-            }
-                
-            // Si el cliente no está conectado a ningún hub
-            System.Diagnostics.Debug.WriteLine("El cliente no está conectado a ningun hub, pero guardamos igualmente el mensaje en la BD");
+            if (!usuarioConectado)
+                System.Diagnostics.Debug.WriteLine("El cliente no está conectado a ningun hub, pero guardamos igualmente el mensaje en la BD");
 
-
-
-            final:
             await _conversacionRepository.AgregarMensajeAColeccionMensajes(mensaje);
             await _conversacionRepository.AgregarMensajeAConversacion(mensaje.IdConversacion,mensaje);
 
             return mensaje;
-            
-
-
         }
 
     }

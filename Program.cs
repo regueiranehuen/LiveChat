@@ -17,9 +17,7 @@ builder.WebHost.ConfigureKestrel(options =>
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
-            {
-                options.LoginPath = "/Index";  // Redirige al login si no está autenticado
-                options.AccessDeniedPath = "/Index";  // Si no tiene permiso
+            { 
                 options.SlidingExpiration = true;  // La cookie expira automáticamente después de un tiempo
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(30);  // Tiempo de expiración de la cookie
             });

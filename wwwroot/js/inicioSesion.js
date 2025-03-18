@@ -61,19 +61,19 @@ connection.onreconnecting(function (error) {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("checkboxMostrarContraseña").addEventListener("click", function (event) {
-        var passwordFields = document.getElementsByName("password");
 
-        passwordFields.forEach(function (passwordField) {
-            if (passwordField.type === "password") {
-                passwordField.type = "text"; // Muestra la contraseña
-            } else {
-                passwordField.type = "password"; // Oculta la contraseña
-            }
-        });
+document.getElementById("checkboxMostrarContraseña").addEventListener("click", function (event) {
+    var passwordFields = document.getElementsByName("password");
+
+    passwordFields.forEach(function (passwordField) {
+        if (passwordField.type === "password") {
+            passwordField.type = "text"; // Muestra la contraseña
+        } else {
+            passwordField.type = "password"; // Oculta la contraseña
+        }
     });
 });
+
 
 
 document.getElementById("btnInicioSesion").addEventListener("click", async function () {
@@ -83,9 +83,10 @@ document.getElementById("btnInicioSesion").addEventListener("click", async funct
     var password = document.getElementsByName("password")[0].value;
     var token = grecaptcha.getResponse();
     var conId = connection.connectionId;
+    var mantenerSesionIniciada = document.getElementById("checkboxSesionIniciada").checked;
     try {
         await axios.post("/Home/Login", {
-            user, password, token, conId
+            user, password, token, conId, mantenerSesionIniciada
         });
 
         window.location.href = urlTemplate; 

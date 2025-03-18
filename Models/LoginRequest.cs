@@ -8,5 +8,7 @@
         public string Token { get; set; }
 
         public string ConId { get; set; }
+
+        public bool MantenerSesionIniciada { get; set; }
     }
 }

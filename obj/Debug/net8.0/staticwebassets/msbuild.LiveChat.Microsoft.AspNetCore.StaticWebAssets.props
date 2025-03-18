@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>genm0efotg</Fingerprint>
-      <Integrity>+Acapz3dZ3Jro4FZW15lvX5fTuYNLDu+zJBotKec8FI=</Integrity>
+      <Fingerprint>cvpau2kspd</Fingerprint>
+      <Integrity>iPhIWCsSNqK/cUpayHD7xZhlPAPRN6u7nHMUUgheMUQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\conversaciones.js'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>91856cbuqd</Fingerprint>
-      <Integrity>E6Kzo5VakQijXx8kbQ+htn+GrH2EEj7yqtavirar84s=</Integrity>
+      <Fingerprint>l6v5agtug5</Fingerprint>
+      <Integrity>HQdDBmjkiVgVKMtI6wD3eg1cFg/zLSoxHkVRnk1ulD0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\inicioSesion.js'))</OriginalItemSpec>
